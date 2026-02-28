@@ -39,11 +39,16 @@
   .pulse th { padding: 6px 12px; text-align: left; font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
   .footer { padding: 16px 24px; background: #fafafa; font-size: 11px; color: #999; }
   .filters { padding: 16px 24px; background: #f8f8f8; border-bottom: 1px solid #eee; }
-  .filter-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-  .filter-group { flex: 1; min-width: 200px; }
+  .filter-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .filter-group { flex: 1; min-width: 240px; }
   .filter-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #666; margin-bottom: 4px; }
-  .filter-value { font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
-  .filter-range { width: 100%; margin: 0; accent-color: #1a1a1a; }
+  .filter-value { font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .range-wrap { position: relative; height: 24px; }
+  .range-wrap input[type=range] { position: absolute; left: 0; top: 0; width: 100%; height: 24px; margin: 0; pointer-events: none; -webkit-appearance: none; appearance: none; background: transparent; }
+  .range-wrap input[type=range]::-webkit-slider-thumb { pointer-events: all; -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #1a1a1a; cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
+  .range-wrap input[type=range]::-moz-range-thumb { pointer-events: all; width: 16px; height: 16px; border-radius: 50%; background: #1a1a1a; cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
+  .range-track { position: absolute; top: 10px; left: 0; right: 0; height: 4px; background: #e5e7eb; }
+  .range-fill { position: absolute; top: 10px; height: 4px; background: #1a1a1a; }
   .filter-count { font-size: 12px; color: #666; margin-top: 8px; }
 </style>
 </head>
@@ -57,19 +62,24 @@
   <div class="filters">
     <div class="filter-row">
       <div class="filter-group">
-        <div class="filter-label">Max Price</div>
-        <div class="filter-value" id="price-val">€5.000.000</div>
-        <input type="range" class="filter-range" id="price-slider" min="300000" max="5000000" step="50000" value="5000000">
+        <div class="filter-label">Price Range</div>
+        <div class="filter-value" id="price-val">€300.000 — €5.000.000</div>
+        <div class="range-wrap">
+          <div class="range-track"></div>
+          <div class="range-fill" id="price-fill"></div>
+          <input type="range" id="price-min-slider" min="100000" max="5000000" step="50000" value="100000">
+          <input type="range" id="price-max-slider" min="100000" max="5000000" step="50000" value="5000000">
+        </div>
       </div>
       <div class="filter-group">
-        <div class="filter-label">Min Area</div>
-        <div class="filter-value" id="area-min-val">100m²</div>
-        <input type="range" class="filter-range" id="area-min-slider" min="80" max="300" step="10" value="100">
-      </div>
-      <div class="filter-group">
-        <div class="filter-label">Max Area</div>
-        <div class="filter-value" id="area-max-val">220m²</div>
-        <input type="range" class="filter-range" id="area-max-slider" min="100" max="500" step="10" value="220">
+        <div class="filter-label">Living Area</div>
+        <div class="filter-value" id="area-val">80m² — 500m²</div>
+        <div class="range-wrap">
+          <div class="range-track"></div>
+          <div class="range-fill" id="area-fill"></div>
+          <input type="range" id="area-min-slider" min="50" max="500" step="10" value="50">
+          <input type="range" id="area-max-slider" min="50" max="500" step="10" value="500">
+        </div>
       </div>
     </div>
     <div class="filter-count" id="filter-count">Showing 100 of 100 listings</div>
@@ -2353,12 +2363,14 @@ Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie.
 </div>
 <script>
 (function() {
-  var priceSlider = document.getElementById('price-slider');
-  var areaMinSlider = document.getElementById('area-min-slider');
-  var areaMaxSlider = document.getElementById('area-max-slider');
+  var pMin = document.getElementById('price-min-slider');
+  var pMax = document.getElementById('price-max-slider');
+  var aMin = document.getElementById('area-min-slider');
+  var aMax = document.getElementById('area-max-slider');
   var priceVal = document.getElementById('price-val');
-  var areaMinVal = document.getElementById('area-min-val');
-  var areaMaxVal = document.getElementById('area-max-val');
+  var areaVal = document.getElementById('area-val');
+  var priceFill = document.getElementById('price-fill');
+  var areaFill = document.getElementById('area-fill');
   var filterCount = document.getElementById('filter-count');
   var listings = document.querySelectorAll('#listings-section .listing');
   var total = listings.length;
@@ -2367,20 +2379,39 @@ Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie.
     return '\u20AC' + Number(n).toLocaleString('de-DE');
   }
 
+  function updateFill(fill, slider1, slider2) {
+    var min = parseFloat(slider1.min);
+    var max = parseFloat(slider1.max);
+    var lo = Math.min(parseFloat(slider1.value), parseFloat(slider2.value));
+    var hi = Math.max(parseFloat(slider1.value), parseFloat(slider2.value));
+    var left = ((lo - min) / (max - min)) * 100;
+    var right = ((hi - min) / (max - min)) * 100;
+    fill.style.left = left + '%';
+    fill.style.width = (right - left) + '%';
+  }
+
+  function clamp() {
+    if (parseInt(pMin.value) > parseInt(pMax.value)) { var t = pMin.value; pMin.value = pMax.value; pMax.value = t; }
+    if (parseInt(aMin.value) > parseInt(aMax.value)) { var t2 = aMin.value; aMin.value = aMax.value; aMax.value = t2; }
+  }
+
   function applyFilters() {
-    var maxPrice = parseInt(priceSlider.value);
-    var minArea = parseInt(areaMinSlider.value);
-    var maxArea = parseInt(areaMaxSlider.value);
+    clamp();
+    var minPrice = parseInt(pMin.value);
+    var maxPrice = parseInt(pMax.value);
+    var minArea = parseInt(aMin.value);
+    var maxArea = parseInt(aMax.value);
     var visible = 0;
 
-    priceVal.textContent = fmtEur(maxPrice);
-    areaMinVal.textContent = minArea + 'm\u00B2';
-    areaMaxVal.textContent = maxArea + 'm\u00B2';
+    priceVal.textContent = fmtEur(minPrice) + ' \u2014 ' + fmtEur(maxPrice);
+    areaVal.textContent = minArea + 'm\u00B2 \u2014 ' + maxArea + 'm\u00B2';
+    updateFill(priceFill, pMin, pMax);
+    updateFill(areaFill, aMin, aMax);
 
     for (var i = 0; i < listings.length; i++) {
       var price = parseInt(listings[i].getAttribute('data-price'));
       var area = parseInt(listings[i].getAttribute('data-area'));
-      var show = price <= maxPrice && area >= minArea && area <= maxArea;
+      var show = price >= minPrice && price <= maxPrice && area >= minArea && area <= maxArea;
       listings[i].style.display = show ? '' : 'none';
       if (show) visible++;
     }
@@ -2388,9 +2419,11 @@ Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie.
     filterCount.textContent = 'Showing ' + visible + ' of ' + total + ' listings';
   }
 
-  priceSlider.addEventListener('input', applyFilters);
-  areaMinSlider.addEventListener('input', applyFilters);
-  areaMaxSlider.addEventListener('input', applyFilters);
+  pMin.addEventListener('input', applyFilters);
+  pMax.addEventListener('input', applyFilters);
+  aMin.addEventListener('input', applyFilters);
+  aMax.addEventListener('input', applyFilters);
+  applyFilters();
 })();
 </script>
 </body>
