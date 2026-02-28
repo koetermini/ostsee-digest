@@ -20,15 +20,18 @@
   .listing-title a:hover { text-decoration: underline; }
   .listing-meta { font-size: 13px; color: #666; margin-top: 4px; }
   .listing-desc { font-size: 12px; color: #444; margin-top: 6px; line-height: 1.4; }
-  .listing-score { display: inline-block; background: #1a1a1a; color: #fff; font-size: 12px; font-weight: 700; padding: 2px 8px; margin-left: 8px; }
-  .listing-score.high { background: #16a34a; }
-  .listing-score.mid { background: #d97706; }
+  .listing-rank { display: inline-block; background: #1a1a1a; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; margin-right: 6px; min-width: 18px; text-align: center; }
+  .listing-score { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; margin-left: 8px; }
+  .score-high { background: #16a34a; color: #fff; }
+  .score-mid { background: #d97706; color: #fff; }
+  .score-low { background: #e5e7eb; color: #666; }
   .listing-reason { font-size: 12px; color: #16a34a; margin-top: 4px; font-weight: 500; }
   .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 6px; margin-right: 4px; background: #f0f0f0; color: #666; }
   .tag.new { background: #dcfce7; color: #166534; }
   .tag.price_drop { background: #fef3c7; color: #92400e; }
   .tag.foreclosure { background: #fee2e2; color: #991b1b; }
   .tag.below_boris { background: #dbeafe; color: #1e40af; }
+  .tag.source { background: #f3e8ff; color: #6b21a8; }
   .price { font-size: 16px; font-weight: 700; color: #1a1a1a; }
   .price-drop { color: #dc2626; font-size: 13px; }
   .pulse { font-size: 13px; }
@@ -41,140 +44,40 @@
 <div class="container">
   <div class="header">
     <h1>Ostsee Deal Tracker</h1>
-    <div class="date">2026-02-28</div>
+    <div class="date">2026-02-28 — 100 listings ranked by score — 363 total active</div>
   </div>
 
-  
-
-  
   <div class="section">
-    <h2 class="section-title">New Listings</h2>
     
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6"><img class="listing-img" src="https://mms.immowelt.de/c/f/4/f/cf4f5ed5-a65b-4bb5-9d81-26789753b2e8.jpg?ci_seal=f67da8d45b7ac29636a211215b707ee670eea70e" alt="Villa zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/attraktiver-einstieg-unter-bodenrichtwert-reetgedecktes-haus-mit-viel-raum-fuer-ihre-visionen/3337786969-208-214"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/06/068a937a-29ec-4c44-8cc0-3cd44567de23?rule=$_59.AUTO" alt="Attraktiver Einstieg unter Bodenrichtwert: Reetgedecktes Haus mit viel Raum für Ihre Visionen"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6">Villa zum Kauf</a>
-        <span class="listing-score mid">50</span>
+        <span class="listing-rank">#1</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/attraktiver-einstieg-unter-bodenrichtwert-reetgedecktes-haus-mit-viel-raum-fuer-ihre-visionen/3337786969-208-214">Attraktiver Einstieg unter Bodenrichtwert: Reetgedecktes Haus mit viel Raum für Ihre Visionen</a>
+        <span class="listing-score score-mid">70</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€318.200</span> —
-        129m² —
-        Bad Segeberg, SH
+        <span class="price">€490.000</span> —
+        315m² —
+        Prerow, MV
         
-         — 4 rooms
-        
-         — Energy: A
-        — 37km coast
-      </p>
-      <p class="listing-desc">Diese Stadtvilla besticht durch Ihre Klarheit und Moderne bis unter das Dach. Der Grundriss ist für Sie noch Variabel und kann angepasst werden. Sie erhalten die Stadtvillla...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1"><img class="listing-img" src="https://mms.immowelt.de/e/b/f/f/ebff77c2-268a-434f-882c-4a8107844ee4.jpg?ci_seal=b6c32756a35f8eac922f6a5d0c3489eb8bc513c4" alt="Villa zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1">Villa zum Kauf</a>
-        <span class="listing-score ">49</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€2.190.000</span> —
-        544m² —
-        Aumühle, SH
-         — Plot: 2594m²
-         — 20 rooms
-        
-         — Energy: F
-        — 59km coast
-      </p>
-      <p class="listing-desc">Ihre Traumvilla mit viel Platz zum Wohnen, Arbeiten und Hobbys - COURTAGEFREI</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef"><img class="listing-img" src="https://mms.immowelt.de/7/0/7/4/70741994-6419-4f3d-a309-2c74f9d8e53b.jpg?ci_seal=45165905c695bce0b7a6d4b11764a662b9707c20" alt="Villa zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef">Villa zum Kauf</a>
-        <span class="listing-score ">49</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€1.950.000</span> —
-        546m² —
-        Rellingen, SH
-         — Plot: 2149m²
-         — 14 rooms
-        
-        
-        — 75km coast
-      </p>
-      <p class="listing-desc">Eine Villa mit Geschichte! Die Villa &quot;Schirmer`s Ruh&quot; ist ein besonderes Schmuckstück und weit über Rellingen hinaus bekannt. Die ca. 1901 errichtete, repräsentative Villa...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a"><img class="listing-img" src="https://mms.immowelt.de/8/4/1/1/841168fb-4347-4204-9435-986f3d762b8e.jpg?ci_seal=7466d584e50db4be07f73ec403c09923072b0af1" alt="Villa zum Kauf - Erstbezug"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a">Villa zum Kauf - Erstbezug</a>
-        <span class="listing-score ">48</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€729.000</span> —
-        180m² —
-        Klütz, MV
-         — Plot: 666m²
-         — 9 rooms
-        
-         — Energy: A+
-        — 16km coast
-      </p>
-      <p class="listing-desc">Wohnen an der Ostsee jetzt auch zu Mieten</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df"><img class="listing-img" src="https://mms.immowelt.de/a/a/3/2/aa3263df-3cc1-4191-b580-f89561334825.jpg?ci_seal=08c9d85570e0b7fe15072449381cec27fa91effa" alt="Villa zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df">Villa zum Kauf</a>
-        <span class="listing-score ">47</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€950.000</span> —
-        228m² —
-        Waren (Müritz), MV
-         — Plot: 1200m²
-         — 9 rooms
-        
-         — Energy: C
-        — 75km coast
-      </p>
-      <p class="listing-desc">Dieses schöne Anwesen liegt eher etwas versteckt am Rande einer Reihe sehr attraktiver Grundstücke am Müritz-Ufer und wirkt vielleicht auf den ersten Blick etwas unscheinbar. Doch...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c"><img class="listing-img" src="https://mms.immowelt.de/4/5/0/0/45005c70-9007-4cb7-b11f-9669aadc9991.jpg?ci_seal=b32a3c6e95a3cda067f3d10f4dce0cbb622476a9" alt="Villa zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c">Villa zum Kauf</a>
-        <span class="listing-score ">45</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€1.690.000</span> —
-        333m² —
-        Hamburg-Klein Borstel, SH
-         — Plot: 792m²
          — 10 rooms
         
-         — Energy: E
-        — 65km coast
+        
+        — 12km coast
+        — €1.556/m²
       </p>
-      <p class="listing-desc">Diese ausgesprochen schöne, außergewöhnliche und interessante Altbauvilla - vis á vis zum Alsterwanderweg - mit insgesamt drei Wohngeschossen wurde im Jahr 1896 mit Keller...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
+      <p class="listing-desc">Objektbeschreibung:
+In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/6487e4ba-fdc9-4c80-b381-dc16d3dcc344"><img class="listing-img" src="https://mms.immowelt.de/5/f/5/f/5f5f864c-d154-4ab0-a00d-0c8431cdf80e.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#2</span>
         <a href="https://www.immowelt.de/expose/6487e4ba-fdc9-4c80-b381-dc16d3dcc344">Doppelhaushälfte zum Kauf</a>
-        <span class="listing-score mid">69</span>
+        <span class="listing-score score-mid">69</span>
       </p>
       <p class="listing-meta">
         <span class="price">€465.000</span> —
@@ -185,16 +88,18 @@
         
         
         — 5km coast
+        — €4.559/m²
       </p>
       <p class="listing-desc">Diese gepflegte Doppelhaushälfte aus dem Jahr 2006 bietet auf einer Wohnfläche von 102 m² und vier Zimmern ein gemütliches Zuhause. In der Einbauküche finden Sie alles mit...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/1def9263-c05a-4781-bfc4-5be343df381d"><img class="listing-img" src="https://mms.immowelt.de/9/3/2/3/9323c8dc-0923-4cde-94dc-fc4bf82c9e2c.jpg?ci_seal=38d82ff4468be3d599c8ecdf62dd378094b7b41a" alt="Bungalow zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <span class="listing-rank">#3</span>
         <a href="https://www.immowelt.de/expose/1def9263-c05a-4781-bfc4-5be343df381d">Bungalow zum Kauf - Erstbezug</a>
-        <span class="listing-score mid">67</span>
+        <span class="listing-score score-mid">67</span>
       </p>
       <p class="listing-meta">
         <span class="price">€498.000</span> —
@@ -205,16 +110,18 @@
         
         
         — 18km coast
+        — €2.815/m²
       </p>
       <p class="listing-desc">Lifetime 7 - Dein großzügiger Bungalow für die ganze Familie. Im Lifetime?7 fehlt es an Platz garantiert nicht! Auf 176,91?m² kannst du dein Eigenheim mit extra Komfort genießen....</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/fa4d5c1d-06bf-486f-8aa8-7450086c0347"><img class="listing-img" src="https://mms.immowelt.de/8/2/b/3/82b31025-341c-4601-993a-efb9fc228e61.jpg?ci_seal=10f9b5ff0e223aa9bf347720a10877c29244f476" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#4</span>
         <a href="https://www.immowelt.de/expose/fa4d5c1d-06bf-486f-8aa8-7450086c0347">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">66</span>
+        <span class="listing-score score-mid">66</span>
       </p>
       <p class="listing-meta">
         <span class="price">€380.000</span> —
@@ -225,16 +132,18 @@
         
         
         — 1km coast
+        — €3.800/m²
       </p>
       <p class="listing-desc">Dieses unterkellerte Einfamilienhaus steht bereits seit geraumer Zeit leer und der berühmte Zahn der Zeit hat ordentlich an ihm genagt. Das Haus erstreckt sich mit seinen Anbauten...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/d4c44076-44f9-4037-a2f4-0a254b077f68"><img class="listing-img" src="https://mms.immowelt.de/d/a/5/c/da5ccc6d-6213-496b-bee5-380690d451a8.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#5</span>
         <a href="https://www.immowelt.de/expose/d4c44076-44f9-4037-a2f4-0a254b077f68">Doppelhaushälfte zum Kauf</a>
-        <span class="listing-score mid">66</span>
+        <span class="listing-score score-mid">66</span>
       </p>
       <p class="listing-meta">
         <span class="price">€840.000</span> —
@@ -245,56 +154,64 @@
         
          — Energy: A+
         — 5km coast
+        — €5.163/m²
       </p>
       <p class="listing-desc">Ein sehr besonderes Objekt mit TOP Ausstattung!!! Das Haus wurde erst im Jahr 2021 als 2-Familienhaus (Aufteilung nach WEG) errichtet, verkauft wird hier die rechte Hälfte. Auf...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8"><img class="listing-img" src="https://mms.immowelt.de/2/b/7/d/2b7d5a47-4e2f-4453-8d65-4d8cb68b9530.jpg?ci_seal=0c996048dfafeaed48c5cc57e3b92b087749a04d" alt="Haus zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/naturnahe-oase-ihr-zuhause-fuer-gemuetlichkeit/3333228637-208-140"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/40/403c11f6-6cd4-493f-b3b8-00d660928bca?rule=$_59.AUTO" alt="Naturnahe Oase: Ihr Zuhause für Gemütlichkeit"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8">Haus zum Kauf</a>
-        <span class="listing-score mid">64</span>
+        <span class="listing-rank">#6</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/naturnahe-oase-ihr-zuhause-fuer-gemuetlichkeit/3333228637-208-140">Naturnahe Oase: Ihr Zuhause für Gemütlichkeit</a>
+        <span class="listing-score score-mid">66</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€429.000</span> —
-        125m² —
-        Karlshagen, MV
-         — Plot: 620m²
-         — 5 rooms
+        <span class="price">€499.950</span> —
+        110m² —
+        Kühlungsborn, MV
+        
+         — 4 rooms
         
         
-        — 4km coast
+        — 5km coast
+        — €4.545/m²
       </p>
-      <p class="listing-desc">Objektbeschreibung ZUM VERKAUF: gepflegte Doppelhaushälfte sucht neue Eigentümer ab Mitte 2026 (nach Vereinbarung) Objektadresse: auf Anfrage – 17449 Karlshagen Haustyp:...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
+      <p class="listing-desc">Objektbeschreibung:
+Ein neues Kapitel beginnt für Ihre Familie: Gestalten Sie Ihr Traumhaus für...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864"><img class="listing-img" src="https://mms.immowelt.de/8/a/1/e/8a1ed96c-c845-4361-88ad-424752b2a0cb.jpg?ci_seal=45ac7123a13c8282a0227045a223ba4a62a24bcf" alt="Einfamilienhaus zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/wohnhaus-im-bungalowstil-4-zimmer-2-baeder-keller-terrasse-und-gartenbereich-in-luetten-klein/3261100360-208-9527"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/ba/ba888deb-a7f4-4c9c-b727-868b541991b5?rule=$_59.AUTO" alt="Wohnhaus im Bungalowstil, 4 Zimmer, 2 Bäder, Keller, Terrasse und Gartenbereich in Lütten Klein"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">64</span>
+        <span class="listing-rank">#7</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/wohnhaus-im-bungalowstil-4-zimmer-2-baeder-keller-terrasse-und-gartenbereich-in-luetten-klein/3261100360-208-9527">Wohnhaus im Bungalowstil, 4 Zimmer, 2 Bäder, Keller, Terrasse und Gartenbereich in Lütten Klein</a>
+        <span class="listing-score score-mid">65</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€475.000</span> —
-        140m² —
-        Dierhagen, MV
-         — Plot: 2369m²
-         — 7 rooms
+        <span class="price">€369.000</span> —
+        103m² —
+        Lütten Klein, MV
         
-         — Energy: H
-        — 8km coast
+         — 4 rooms
+        
+        
+        — 2km coast
+        — €3.583/m²
       </p>
-      <p class="listing-desc">Rohdiamant in zentraler Lage Dierhagens. Mit etwas handwerklichem Geschick bietet dieses betagte Einfamilienhaus großes Potenzial. Geben Sie dieser Immobilie seinen alten Glanz...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
+      <p class="listing-desc">Objektbeschreibung:
+Aus Diskretionsgründen handelt es sich bei dem öffentlichen Exposé in den...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/3122adb5-f776-46b2-a81e-b16cd98a8614"><img class="listing-img" src="https://mms.immowelt.de/7/e/4/f/7e4f2a78-2180-476e-9a9a-65da9d1bebac.jpg?ci_seal=296747f90c9510d78ab4203d80b28f44c133028e" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#8</span>
         <a href="https://www.immowelt.de/expose/3122adb5-f776-46b2-a81e-b16cd98a8614">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">64</span>
+        <span class="listing-score score-mid">64</span>
       </p>
       <p class="listing-meta">
         <span class="price">€750.000</span> —
@@ -305,16 +222,18 @@
         
         
         — 12km coast
+        — €2.976/m²
       </p>
       <p class="listing-desc">* Zentrale Lage im Ostseebad Prerow, nur wenige Gehminuten zum Strand, zur Seebrücke und zum Ortskern * Denkmalgeschützte Villa aus dem Jahr 1930 auf ca. 701 m² Grundstück *...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/b6086943-9488-40d5-a801-38c53e931620"><img class="listing-img" src="https://mms.immowelt.de/9/2/9/7/92978244-cba9-46fe-9397-85401ea74a8c.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#9</span>
         <a href="https://www.immowelt.de/expose/b6086943-9488-40d5-a801-38c53e931620">Doppelhaushälfte zum Kauf</a>
-        <span class="listing-score mid">63</span>
+        <span class="listing-score score-mid">63</span>
       </p>
       <p class="listing-meta">
         <span class="price">€449.000</span> —
@@ -325,16 +244,62 @@
         
          — Energy: E
         — 23km coast
+        — €2.427/m²
       </p>
       <p class="listing-desc">Erwecken Sie dieses Schmuckstück wieder zum Leben! Zum Verkauf steht eine geräumige Doppelhaushälfte mit 2 Ferienwohnungen in sehr ruhiger Lage von Zingst. Der feinsandige...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8"><img class="listing-img" src="https://mms.immowelt.de/2/b/7/d/2b7d5a47-4e2f-4453-8d65-4d8cb68b9530.jpg?ci_seal=0c996048dfafeaed48c5cc57e3b92b087749a04d" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#10</span>
+        <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8">Haus zum Kauf</a>
+        <span class="listing-score score-mid">63</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€429.000</span> —
+        125m² —
+        Karlshagen, MV
+         — Plot: 620m²
+         — 5 rooms
+        
+        
+        — 4km coast
+        — €3.432/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung ZUM VERKAUF: gepflegte Doppelhaushälfte sucht neue Eigentümer ab Mitte 2026 (nach Vereinbarung) Objektadresse: auf Anfrage – 17449 Karlshagen Haustyp:...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864"><img class="listing-img" src="https://mms.immowelt.de/8/a/1/e/8a1ed96c-c845-4361-88ad-424752b2a0cb.jpg?ci_seal=45ac7123a13c8282a0227045a223ba4a62a24bcf" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#11</span>
+        <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-mid">63</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€475.000</span> —
+        140m² —
+        Dierhagen, MV
+         — Plot: 2369m²
+         — 7 rooms
+        
+         — Energy: H
+        — 8km coast
+        — €3.393/m²
+      </p>
+      <p class="listing-desc">Rohdiamant in zentraler Lage Dierhagens. Mit etwas handwerklichem Geschick bietet dieses betagte Einfamilienhaus großes Potenzial. Geben Sie dieser Immobilie seinen alten Glanz...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/00083c07-ae77-491d-98d3-ed5614a8effe"><img class="listing-img" src="https://mms.immowelt.de/9/b/b/7/9bb71806-4568-4861-ae7a-2cd0e426546b.jpg?ci_seal=9fb62044ed14c1e4170b3078a53eec15db60020c" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#12</span>
         <a href="https://www.immowelt.de/expose/00083c07-ae77-491d-98d3-ed5614a8effe">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">63</span>
+        <span class="listing-score score-mid">63</span>
       </p>
       <p class="listing-meta">
         <span class="price">€695.000</span> —
@@ -345,16 +310,64 @@
         
          — Energy: F
         — 12km coast
+        — €4.371/m²
       </p>
       <p class="listing-desc">Zum Verkauf steht ein Wohnhaus. Das denkmalgeschützte, historische Wohnhaus wurde entsprechend der Kreisdenkmalliste im Jahr 1890 erbaut. Es steht zentral im Ostseebad Prerow, auf...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-neubau-in-bestlage/3317377023-208-140"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/8b/8b2ca662-3ca9-43bf-805e-d21c495d5b84?rule=$_59.AUTO" alt="Ihr Neubau in Bestlage"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#13</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-neubau-in-bestlage/3317377023-208-140">Ihr Neubau in Bestlage</a>
+        <span class="listing-score score-mid">63</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€769.679</span> —
+        170m² —
+        Kühlungsborn, MV
+        
+         — 5 rooms
+        
+        
+        — 5km coast
+        — €4.528/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/ostseebad-baabe-moderne-dhh-5-zimmer-125-m-seeblick-kamin-2-baeder-stellplaetze-/3314090456-208-19464"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a9/a9b70ff9-3795-496f-b259-2833a052d301?rule=$_59.AUTO" alt="Ostseebad Baabe: Moderne DHH, 5 Zimmer, 125 m², Seeblick, Kamin, 2 Bäder &amp; Stellplätze!"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#14</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/ostseebad-baabe-moderne-dhh-5-zimmer-125-m-seeblick-kamin-2-baeder-stellplaetze-/3314090456-208-19464">Ostseebad Baabe: Moderne DHH, 5 Zimmer, 125 m², Seeblick, Kamin, 2 Bäder &amp; Stellplätze!</a>
+        <span class="listing-score score-mid">61</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€499.000</span> —
+        125m² —
+        Baabe, MV
+        
+         — 5 rooms
+        
+        
+        — 19km coast
+        — €3.992/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung
+Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/aca32ffc-5185-4d22-83a8-389c49663c5e"><img class="listing-img" src="https://mms.immowelt.de/6/7/f/5/67f53155-757d-477b-abb5-91b3b21e7fb3.jpg?ci_seal=fb8613330cc00b9dc587dddfd2b00b2956402d73" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#15</span>
         <a href="https://www.immowelt.de/expose/aca32ffc-5185-4d22-83a8-389c49663c5e">Haus zum Kauf</a>
-        <span class="listing-score mid">60</span>
+        <span class="listing-score score-mid">60</span>
       </p>
       <p class="listing-meta">
         <span class="price">€330.000</span> —
@@ -365,16 +378,18 @@
         
          — Energy: D
         — 15km coast
+        — €2.089/m²
       </p>
       <p class="listing-desc">Kurzbeschreibung zentrale Lage Objekt Im Zentrum der Hafenstadt Sassnitz bieten wir Ihnen diese Stadtvilla mit Charakter, genannt &quot;Mien Hüsing&quot;, mit einem herrlichen Ostseeblick,...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/1b51228a-a13d-49a4-8185-371acd45c12a"><img class="listing-img" src="https://mms.immowelt.de/b/a/4/a/ba4a86dc-77cc-48f4-8dec-4e2b8db5bada.jpg?ci_seal=38515044c83df964ecba5678952fc2e5de78e4b1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#16</span>
         <a href="https://www.immowelt.de/expose/1b51228a-a13d-49a4-8185-371acd45c12a">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">59</span>
+        <span class="listing-score score-mid">59</span>
       </p>
       <p class="listing-meta">
         <span class="price">€1.350.000</span> —
@@ -385,16 +400,18 @@
         
         
         — 7km coast
+        — €8.385/m²
       </p>
       <p class="listing-desc">Dieses außergewöhnliche Einfamilienhaus besticht durch seine moderne Architektur und ein helles, weitläufiges Raumkonzept, das von einer imposanten, offenen Galerie geprägt wird....</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/3940ab15-9634-4116-b74f-b7bfe916f358"><img class="listing-img" src="https://mms.immowelt.de/2/e/8/2/2e82f73f-c46d-4b36-b5d4-1cdcee0bb2bd.jpg?ci_seal=807ae0a4bf97a2bb327a9b714a7a6a30500f37b8" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#17</span>
         <a href="https://www.immowelt.de/expose/3940ab15-9634-4116-b74f-b7bfe916f358">Haus zum Kauf</a>
-        <span class="listing-score mid">59</span>
+        <span class="listing-score score-mid">59</span>
       </p>
       <p class="listing-meta">
         <span class="price">€785.000</span> —
@@ -405,16 +422,18 @@
         
          — Energy: B
         — 9km coast
+        — €4.361/m²
       </p>
       <p class="listing-desc">Dieses großzügige Luxusferienhaus im skandinavischen Stil wurde 2008 erbaut und befindet sich in einem äußerst gepflegten Zustand. Der Pool- und Wellnessbereich wurde 2019 koplett...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/fd7f85ad-dbc6-489d-9d27-2fb5e0bd6be7"><img class="listing-img" src="https://mms.immowelt.de/c/c/d/b/ccdbf1b9-1179-45c3-b969-6cffc8ddc8b7.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#18</span>
         <a href="https://www.immowelt.de/expose/fd7f85ad-dbc6-489d-9d27-2fb5e0bd6be7">Doppelhaushälfte zum Kauf</a>
-        <span class="listing-score mid">58</span>
+        <span class="listing-score score-mid">58</span>
       </p>
       <p class="listing-meta">
         <span class="price">€305.210</span> —
@@ -425,16 +444,18 @@
         
         
         — 2km coast
+        — €2.907/m²
       </p>
       <p class="listing-desc">Beschreibung ***Doppelhaushälfte rechts, Nr. 41*** Auf einem ca. 488 m² großen Grundstück entsteht ein modern und hochwertig ausgestattetes in Massivbauweise errichtetes...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/852d4718-db4a-4060-b49b-89aebdd3d9d5"><img class="listing-img" src="https://mms.immowelt.de/1/d/a/1/1da1e995-49f8-48ac-b5f3-f21c125fe836.jpg?ci_seal=534e3c86f7d764ed25e9ddf2ac098bc083133be5" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#19</span>
         <a href="https://www.immowelt.de/expose/852d4718-db4a-4060-b49b-89aebdd3d9d5">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">58</span>
+        <span class="listing-score score-mid">58</span>
       </p>
       <p class="listing-meta">
         <span class="price">€698.000</span> —
@@ -445,16 +466,64 @@
         
         
         — 23km coast
+        — €3.430/m²
       </p>
       <p class="listing-desc">+++Ihr neues Traumhaus+++ Zum Verkauf steht dieses liebevoll gepflegte Einfamilienhaus mit ca. 203,50 m² Wohnfläche und ca. 774 m² Grundstücksfläche in Hafennähe von Zingst....</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-offener-architektur/3115265758-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/0a/0a2a8bad-e6f7-4b22-8fe8-3c4a7199ef64?rule=$_59.AUTO" alt="EINFAMILIENHAUS MIT OFFENER ARCHITEKTUR"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#20</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-offener-architektur/3115265758-208-21596">EINFAMILIENHAUS MIT OFFENER ARCHITEKTUR</a>
+        <span class="listing-score score-mid">58</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€599.000</span> —
+        135m² —
+        Karlshagen, MV
+        
+         — 5 rooms
+        
+        
+        — 4km coast
+        — €4.437/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Zeitlose Eleganz außen, Weite und ein besonderes Raumgefühl innen - das ist...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/freizeitkapitaene-aufgepasst-ostseetypisches-ferienhaus-am-yachthafen/3336337907-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2a/2a15113a-88dc-4f83-ae5b-2a77c1d9db49?rule=$_59.AUTO" alt="Freizeitkapitäne aufgepasst!  Ostseetypisches Ferienhaus am Yachthafen"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#21</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/freizeitkapitaene-aufgepasst-ostseetypisches-ferienhaus-am-yachthafen/3336337907-208-21596">Freizeitkapitäne aufgepasst!  Ostseetypisches Ferienhaus am Yachthafen</a>
+        <span class="listing-score score-mid">58</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€549.900</span> —
+        121.47m² —
+        Karlshagen, MV
+        
+         — 5 rooms
+        
+        
+        — 4km coast
+        — €4.527/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/30209026-019d-4e01-8b0c-9586cf3203aa"><img class="listing-img" src="https://mms.immowelt.de/2/7/3/b/273b43c5-265c-4190-843c-40de892a569b.jpg?ci_seal=98430ffaa644f7aa5cf47716caa2a61bbe28b44e" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#22</span>
         <a href="https://www.immowelt.de/expose/30209026-019d-4e01-8b0c-9586cf3203aa">Bungalow zum Kauf</a>
-        <span class="listing-score mid">57</span>
+        <span class="listing-score score-mid">57</span>
       </p>
       <p class="listing-meta">
         <span class="price">€360.000</span> —
@@ -465,16 +534,18 @@
         
          — Energy: E
         — 2km coast
+        — €2.927/m²
       </p>
       <p class="listing-desc">Dieser Bungalow befindet sich in einem ruhigen Wohngebiet von Bergen auf Rügen und bietet komfortables Wohnen auf einer Ebene. Die Wohnfläche von ca. 123 m² verteilt sich auf vier...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/0f2cb3b5-24c2-4b35-a031-ce130421a768"><img class="listing-img" src="https://mms.immowelt.de/3/a/8/b/3a8be245-c927-4065-b2f7-a80b0f75b7df.jpg?ci_seal=c9b5e7a815c61b2248d7f7df4edabb64c3ffb93d" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#23</span>
         <a href="https://www.immowelt.de/expose/0f2cb3b5-24c2-4b35-a031-ce130421a768">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">57</span>
+        <span class="listing-score score-mid">57</span>
       </p>
       <p class="listing-meta">
         <span class="price">€379.500</span> —
@@ -485,16 +556,18 @@
         
          — Energy: D
         — 2km coast
+        — €2.108/m²
       </p>
       <p class="listing-desc">- gepflegtes Massivwohnhaus mit Keller und Einliegerwhg./FeWo - Ursprungsbaujahr der Grundmauern ca.1937, Neubau &amp;amp; Anbau 1985, nochmalige Totalsanierung 1996 - 98:...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/f74d0e4b-8b5a-4fe2-a640-bc84a567a616"><img class="listing-img" src="https://mms.immowelt.de/6/3/3/3/633360d7-f6fd-4ada-9e75-df2cff0e325b.jpg?ci_seal=c3544378620b7c24e61c2bedca3e16b50307e77b" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#24</span>
         <a href="https://www.immowelt.de/expose/f74d0e4b-8b5a-4fe2-a640-bc84a567a616">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">57</span>
+        <span class="listing-score score-mid">57</span>
       </p>
       <p class="listing-meta">
         <span class="price">€959.000</span> —
@@ -505,16 +578,18 @@
         
          — Energy: A+
         — 9km coast
+        — €5.641/m²
       </p>
       <p class="listing-desc">Zwischen Meeresbrise und Landhausflair - Ihr neues Zuhause in Grömitz Ein Ort, an dem sich Urlaub und Alltag für immer die Hand reichen. Willkommen in Ihrem persönlichen...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/fa729021-6e3d-4032-a0e1-c6f5b8485cf8"><img class="listing-img" src="https://mms.immowelt.de/2/c/8/4/2c84dad8-1663-417d-a5b4-85e92c775d3a.jpg?ci_seal=45322954a9a0159446f840846ddb4123cb2cee25" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#25</span>
         <a href="https://www.immowelt.de/expose/fa729021-6e3d-4032-a0e1-c6f5b8485cf8">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">56</span>
+        <span class="listing-score score-mid">56</span>
       </p>
       <p class="listing-meta">
         <span class="price">€1.395.000</span> —
@@ -525,16 +600,18 @@
         
         
         — 4km coast
+        — €6.341/m²
       </p>
       <p class="listing-desc">Dieses Hochdielenhaus besticht durch seine traditionelle Bauweise und seinen einzigartigen Charakter. Liebevoll restauriert, strahlt das Haus eine unvergleichliche Schönheit aus....</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/21abb398-fefd-4258-a697-b26b6cf63686"><img class="listing-img" src="https://mms.immowelt.de/4/5/c/1/45c1e51a-a7aa-43e9-9761-a7806f243702.jpg?ci_seal=beb12a9c0a7a2f94a857538dd7f3af4655415b91" alt="Reihenmittelhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#26</span>
         <a href="https://www.immowelt.de/expose/21abb398-fefd-4258-a697-b26b6cf63686">Reihenmittelhaus zum Kauf</a>
-        <span class="listing-score mid">56</span>
+        <span class="listing-score score-mid">56</span>
       </p>
       <p class="listing-meta">
         <span class="price">€435.000</span> —
@@ -545,16 +622,18 @@
         
          — Energy: C
         — 2km coast
+        — €2.719/m²
       </p>
       <p class="listing-desc">Dieses großzügige Reihenhaus in Stralsund, im beliebten Stadtteil Knieper Nord, überzeugt als echtes Raumwunder und bietet ideale Voraussetzungen für Familien oder Käufer mit...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/80544bab-02cf-44af-86ec-55f3d9263222"><img class="listing-img" src="https://mms.immowelt.de/7/1/5/1/7151f159-dd8e-4b17-8934-3ddf9d2ee875.jpg?ci_seal=be5c61ffb00b8da53e569b269ccdbee44063e589" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#27</span>
         <a href="https://www.immowelt.de/expose/80544bab-02cf-44af-86ec-55f3d9263222">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">56</span>
+        <span class="listing-score score-mid">56</span>
       </p>
       <p class="listing-meta">
         <span class="price">€529.000</span> —
@@ -565,16 +644,41 @@
         
          — Energy: E
         — 18km coast
+        — €2.645/m²
       </p>
       <p class="listing-desc">Kurzbeschreibung Großzügiges Wohnen auf zwei Ebenen Objekt Dieser außergewöhnliche Bungalow besticht durch seine exklusive Split-Level-Bauweise und wurde erst 1991 in solider...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/bauen-sie-fuer-ihrer-familie-ein-energiesparhaus-inkl-grundstueck/3311677685-208-224"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/de/de4dbdd9-8464-4167-b589-2e401c7c70aa?rule=$_59.AUTO" alt="Bauen Sie für Ihrer Familie ein Energiesparhaus inkl. Grundstück"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#28</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/bauen-sie-fuer-ihrer-familie-ein-energiesparhaus-inkl-grundstueck/3311677685-208-224">Bauen Sie für Ihrer Familie ein Energiesparhaus inkl. Grundstück</a>
+        <span class="listing-score score-mid">56</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€380.000</span> —
+        182m² —
+        Wismar, MV
+        
+         — 5 rooms
+        
+        
+        — 1km coast
+        — €2.088/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Bei diesem puristisch gestalteten Haus mit rund 182 m² Nettogrundfäche...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/e245eac0-c1c1-4f67-ad03-4595a8074c7f"><img class="listing-img" src="https://mms.immowelt.de/a/a/9/a/aa9aefad-e556-4221-965d-acbf71555400.jpg?ci_seal=0f683084ea97f898277a5495724f1e74dd272854" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#29</span>
         <a href="https://www.immowelt.de/expose/e245eac0-c1c1-4f67-ad03-4595a8074c7f">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">55</span>
+        <span class="listing-score score-mid">55</span>
       </p>
       <p class="listing-meta">
         <span class="price">€825.000</span> —
@@ -585,16 +689,18 @@
         
          — Energy: B
         — 23km coast
+        — €5.323/m²
       </p>
       <p class="listing-desc">Die Highlights auf einen Blick: - Top-Lage: Hanglage im Ostseebad Göhren mit unverbautem Ostseeblick - Strandnähe: Kurze Wege ans Meer (Südstrand ca. 600 m, Nordstrand ca. 1.000...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/cec10dff-b0ad-472e-98db-06ebcf259685"><img class="listing-img" src="https://mms.immowelt.de/0/2/b/2/02b24278-726c-48c3-8a38-6a765151687f.jpg?ci_seal=07cf732b9105c235e3f578d50371768f1bbaf6f6" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#30</span>
         <a href="https://www.immowelt.de/expose/cec10dff-b0ad-472e-98db-06ebcf259685">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">55</span>
+        <span class="listing-score score-mid">55</span>
       </p>
       <p class="listing-meta">
         <span class="price">€738.350</span> —
@@ -605,16 +711,18 @@
         
         
         — 23km coast
+        — €6.900/m²
       </p>
       <p class="listing-desc">+++NEUER PREIS+++PROVISIONSFREI DIREKT VOM BAUTRÄGER+++ Auf der beliebten Halbinsel Darß, in dem wunderschönen Seebad Zingst könnte Ihr neues Ferienhaus entstehen. Projektiert ist...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/572ba357-ed36-4a7b-8b89-fc637015b6c6"><img class="listing-img" src="https://mms.immowelt.de/9/9/f/a/99fad0ab-d10c-4403-be29-e110e5dca663.png?ci_seal=f76f61d3051669e26712a2319877e01974ee9e34" alt="Einfamilienhaus zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <span class="listing-rank">#31</span>
         <a href="https://www.immowelt.de/expose/572ba357-ed36-4a7b-8b89-fc637015b6c6">Einfamilienhaus zum Kauf - Erstbezug</a>
-        <span class="listing-score mid">55</span>
+        <span class="listing-score score-mid">55</span>
       </p>
       <p class="listing-meta">
         <span class="price">€1.400.000</span> —
@@ -625,36 +733,88 @@
         
          — Energy: A+
         — 11km coast
+        — €7.955/m²
       </p>
       <p class="listing-desc">Dieses exklusive Einfamilienhaus in Laboe bei Kiel bietet alles, was Familien sich wünschen: modernes Design, hochwertige Ausstattung und durchdachtes Raumkonzept. Das 2022...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4"><img class="listing-img" src="https://mms.immowelt.de/a/1/9/4/a1943c44-7a4f-48c4-95a6-35eb4fac3a78.jpg?ci_seal=c0faf0ad3143162ff1ef3cfe8181c9d50dbad646" alt="Haus zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/kein-bock-auf-zinshammer-und-preiswucher-nicht-beim-marktfuehrer-/3041511372-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/79/79947c3e-621b-402b-936f-392ab4e7bbee?rule=$_59.AUTO" alt="Kein Bock auf Zinshammer und Preiswucher? Nicht beim Marktführer!!!"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4">Haus zum Kauf</a>
-        <span class="listing-score mid">55</span>
+        <span class="listing-rank">#32</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/kein-bock-auf-zinshammer-und-preiswucher-nicht-beim-marktfuehrer-/3041511372-208-243">Kein Bock auf Zinshammer und Preiswucher? Nicht beim Marktführer!!!</a>
+        <span class="listing-score score-mid">55</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€1.150.000</span> —
-        227m² —
-        Grömitz, SH
-         — Plot: 708m²
-         — 9 rooms
+        <span class="price">€347.000</span> —
+        112m² —
+        Greifswald, MV
+        
+         — 4 rooms
         
         
-        — 9km coast
+        — 11km coast
+        — €3.098/m²
       </p>
-      <p class="listing-desc">Im Alleinauftrag wird dieses Gebäude-Ensemble, bestehend aus einem im Jahr 1928 in massiver Bauweise errichteten Einfamilienhaus und den beiden Erweiterungsbauten aus den...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
+      <p class="listing-desc">Objektbeschreibung:
+Der Markt spielt verrückt? Dann bieten bloß die größten Hausbauer Sicherheit....</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/kuestenwald-flair-viel-raum-und-freiraum-nur-minuten-zum-meer/3336341113-208-195"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/12/12385b98-a013-4ae3-94fc-8585772144cc?rule=$_59.AUTO" alt="Küstenwald-Flair: viel Raum und Freiraum, nur Minuten zum Meer"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#33</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/kuestenwald-flair-viel-raum-und-freiraum-nur-minuten-zum-meer/3336341113-208-195">Küstenwald-Flair: viel Raum und Freiraum, nur Minuten zum Meer</a>
+        <span class="listing-score score-mid">55</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€880.000</span> —
+        215m² —
+        Trassenheide, MV
+        
+         — 8 rooms
+        
+        
+        — 1km coast
+        — €4.093/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Zum Verkauf steht ein gepflegtes Zweifamilienhaus mit einer Gesamtwohnfläche...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller · 544m to coast</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/erfuellen-sie-sich-jetzt-ihren-wohntraum-in-idyllischen-lage/3311677698-208-224"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/44/44b7688c-6a6b-40fe-bb54-93813a84c501?rule=$_59.AUTO" alt="Erfüllen Sie sich jetzt Ihren Wohntraum in idyllischen Lage"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#34</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/erfuellen-sie-sich-jetzt-ihren-wohntraum-in-idyllischen-lage/3311677698-208-224">Erfüllen Sie sich jetzt Ihren Wohntraum in idyllischen Lage</a>
+        <span class="listing-score score-mid">55</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€385.000</span> —
+        147m² —
+        Wismar, MV
+        
+         — 5 rooms
+        
+        
+        — 1km coast
+        — €2.619/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+RAFFINESSE BEIM BUNGALOW
+Besonders spannend zeigt sich die Grundrissform dieses...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/7034c25d-281a-4024-8e62-e0695f7603e4"><img class="listing-img" src="https://mms.immowelt.de/3/e/5/9/3e59c4c5-aae2-45ab-99ea-075108f2d850.jpg?ci_seal=70d83db3e2b57f84b4e8c8c200f53a5cab2b9ee6" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#35</span>
         <a href="https://www.immowelt.de/expose/7034c25d-281a-4024-8e62-e0695f7603e4">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€998.000</span> —
@@ -665,16 +825,18 @@
         
          — Energy: G
         — 9km coast
+        — €4.516/m²
       </p>
       <p class="listing-desc">- Grundstück ca. 2674 m² - Wohnfläche ca. 147 m² - Baujahr ca. 1900 - Rohrdach - Ziegelbauweise - 9 Zimmer - 3 Bäder - Küche - Diele</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/91b1ec68-1688-4144-8a53-9a80572a303a"><img class="listing-img" src="https://mms.immowelt.de/4/e/8/f/4e8f4029-648e-4de4-b816-632bcea8a84c.jpg?ci_seal=cd9fef4cf55da9631a2e1626f97e6ea56f84a9cc" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#36</span>
         <a href="https://www.immowelt.de/expose/91b1ec68-1688-4144-8a53-9a80572a303a">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€399.000</span> —
@@ -685,36 +847,18 @@
         
          — Energy: C
         — 4km coast
+        — €3.286/m²
       </p>
       <p class="listing-desc">Sie sind auf der Suche nach einem Einfamilienhaus, in dem Sie die Ruhe und eine Brise Seeluft genießen können? Dann sind Sie hier genau an der richtigen Stelle, denn dieses...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f"><img class="listing-img" src="https://mms.immowelt.de/e/9/7/9/e979f680-6b42-4f9e-ae70-468b2eda86a8.jpg?ci_seal=ca3b289b73153e15a11218406226758b890eaba6" alt="Einfamilienhaus zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€499.000</span> —
-        187m² —
-        Sassnitz, MV
-         — Plot: 602m²
-         — 8 rooms
-        
-        
-        — 15km coast
-      </p>
-      <p class="listing-desc">Das im Jahre 1996 erbaute und 2004 letztmalig modernisierte Objekt präsentiert sich in einem nahezu neuwertigen Zustand. Mit insgesamt 8 Zimmern, die sich über zwei Etagen...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/bbc1c398-e2b9-4de4-b71e-62047b291fc4"><img class="listing-img" src="https://mms.immowelt.de/0/c/d/6/0cd61977-a4e9-4bb0-b863-33e7de8e0721.jpg?ci_seal=8450207e9cbad5b3ab9b4cab156c6149e8a31d65" alt="Einfamilienhaus zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <span class="listing-rank">#37</span>
         <a href="https://www.immowelt.de/expose/bbc1c398-e2b9-4de4-b71e-62047b291fc4">Einfamilienhaus zum Kauf - Erstbezug</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€400.000</span> —
@@ -725,16 +869,18 @@
         
         
         — 32km coast
+        — €2.985/m²
       </p>
       <p class="listing-desc">Dieses Haus entspricht unserem Musterhaus und kann deswegen jederzeit besichtigt werden. Das Modell 13.02.s von massa haus GmbH vereint modernes Design mit funktionaler...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/a194a786-baec-4b1e-a51a-171086f3b231"><img class="listing-img" src="https://mms.immowelt.de/8/1/e/6/81e6c0e3-b572-4ce0-9388-b221a20463a5.jpg?ci_seal=de13dd0206f851cdde1c776c1dff154a03e153d1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#38</span>
         <a href="https://www.immowelt.de/expose/a194a786-baec-4b1e-a51a-171086f3b231">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€399.000</span> —
@@ -745,16 +891,18 @@
         
          — Energy: C
         — 4km coast
+        — €3.192/m²
       </p>
       <p class="listing-desc">In Stralsund-Devin erwartet Sie dieses charmante Einfamilienhaus in einer ruhigen, landschaftlich reizvollen Lage - umgeben von Park, Radweg, Badestrand und dem nahen...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/51aa66cf-d511-4214-9fc0-90aababd7683"><img class="listing-img" src="https://mms.immowelt.de/f/7/f/b/f7fba20b-7544-46cb-bf1d-3acec7519a2d.jpg?ci_seal=917586c083a9136b17547b117a0a7c9ce9c835b1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#39</span>
         <a href="https://www.immowelt.de/expose/51aa66cf-d511-4214-9fc0-90aababd7683">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€355.000</span> —
@@ -765,16 +913,18 @@
         
          — Energy: H
         — 5km coast
+        — €3.227/m²
       </p>
       <p class="listing-desc">Dieses gepflegte Einfamilienhaus aus dem Jahr 1960 bietet Ihnen und Ihrer Familie viel Raum zum Wohlfühlen. Die Immobilie verfügt über vier Zimmer, die sich auf eine Wohnfläche...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/ce125b55-45f9-486e-9826-1d0787b04225"><img class="listing-img" src="https://mms.immowelt.de/c/b/2/8/cb2878f3-f9ac-40aa-b243-4aaca867b17e.jpg?ci_seal=c51ede8eab04d354f19d0377cd5f096cc993b705" alt="Reihenendhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#40</span>
         <a href="https://www.immowelt.de/expose/ce125b55-45f9-486e-9826-1d0787b04225">Reihenendhaus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€499.000</span> —
@@ -785,16 +935,40 @@
         
          — Energy: B
         — 7km coast
+        — €4.489/m²
       </p>
       <p class="listing-desc">Dieses umfassend modernisierte Reihenendhaus überzeugt durch eine gelungene Kombination aus großzügigem Raumangebot, zeitgemäßer Ausstattung und einer ruhigen,...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4"><img class="listing-img" src="https://mms.immowelt.de/a/1/9/4/a1943c44-7a4f-48c4-95a6-35eb4fac3a78.jpg?ci_seal=c0faf0ad3143162ff1ef3cfe8181c9d50dbad646" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#41</span>
+        <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4">Haus zum Kauf</a>
+        <span class="listing-score score-mid">54</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€1.150.000</span> —
+        227m² —
+        Grömitz, SH
+         — Plot: 708m²
+         — 9 rooms
+        
+        
+        — 9km coast
+        — €5.066/m²
+      </p>
+      <p class="listing-desc">Im Alleinauftrag wird dieses Gebäude-Ensemble, bestehend aus einem im Jahr 1928 in massiver Bauweise errichteten Einfamilienhaus und den beiden Erweiterungsbauten aus den...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/3ce000b2-276e-4a21-acb2-ca0d4ab116fc"><img class="listing-img" src="https://mms.immowelt.de/a/0/b/4/a0b40f56-9d2e-4226-9d41-a55594dd7207.jpg?ci_seal=2c87c2159afe4c5bd85653c9d2fdaee68b31a432" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#42</span>
         <a href="https://www.immowelt.de/expose/3ce000b2-276e-4a21-acb2-ca0d4ab116fc">Haus zum Kauf</a>
-        <span class="listing-score mid">54</span>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
         <span class="price">€1.690.000</span> —
@@ -805,36 +979,86 @@
         
          — Energy: E
         — 9km coast
+        — €8.895/m²
       </p>
       <p class="listing-desc">Dieses sehr gepflegte Einfamilienhaus mit Einliegerwohnung befindet sich in ruhiger Sackgassenlage in unmittelbarer Nähe zur Ostsee und bietet auf einem ca. 750 m² großen...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb"><img class="listing-img" src="https://mms.immowelt.de/e/b/b/4/ebb43aa9-30cb-4ba4-99d1-0bb9c77f685a.jpg?ci_seal=197dea3404f5dafea6efef377611ad3aaab8bd3c" alt="Einfamilienhaus zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/2-mehrfamilienhaeuser-mit-insgesamt-8-wohneinheiten/3336339879-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/15/15478a5a-2b56-47ea-8109-0d852ae6c05e?rule=$_59.AUTO" alt="2 Mehrfamilienhäuser mit insgesamt 8 Wohneinheiten"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">53</span>
+        <span class="listing-rank">#43</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/2-mehrfamilienhaeuser-mit-insgesamt-8-wohneinheiten/3336339879-208-21596">2 Mehrfamilienhäuser mit insgesamt 8 Wohneinheiten</a>
+        <span class="listing-score score-mid">54</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€659.000</span> —
-        220m² —
-        Krummin, MV
-         — Plot: 1585m²
-         — 9 rooms
+        <span class="price">€1.580.000</span> —
+        350m² —
+        Karlshagen, MV
+        
+         — 22 rooms
         
         
-        — 5km coast
+        — 4km coast
+        — €4.514/m²
       </p>
-      <p class="listing-desc">Das Objekt wird z.Z. als Ferienvermietung genutzt und steht mit der kompletten Einrichtung zum Verkauf. Kein Mietkauf. Das Wohnhaus sowie das Nebengebäude wurden 1998 nach einem...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p class="listing-desc">Objektbeschreibung:
+Diese gepflegten Immobilien, zwei Mehrfamilienhäuser aus dem Baujahr 2010,...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/st-gertrud-einfamilienhaus-im-split-level-mit-6-zimmern-keller-und-garage/3315967274-208-421"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/ae/ae6c3dd3-81e0-4f63-a586-d250e5084ae8?rule=$_59.AUTO" alt="St. Gertrud: Einfamilienhaus im Split-Level mit 6 Zimmern, Keller und Garage"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#44</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/st-gertrud-einfamilienhaus-im-split-level-mit-6-zimmern-keller-und-garage/3315967274-208-421">St. Gertrud: Einfamilienhaus im Split-Level mit 6 Zimmern, Keller und Garage</a>
+        <span class="listing-score score-mid">54</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€375.000</span> —
+        130m² —
+        Lübeck, SH
+        
+         — 6 rooms
+        
+        
+        — 13km coast
+        — €2.885/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f"><img class="listing-img" src="https://mms.immowelt.de/e/9/7/9/e979f680-6b42-4f9e-ae70-468b2eda86a8.jpg?ci_seal=ca3b289b73153e15a11218406226758b890eaba6" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#45</span>
+        <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-mid">53</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€499.000</span> —
+        187m² —
+        Sassnitz, MV
+         — Plot: 602m²
+         — 8 rooms
+        
+        
+        — 15km coast
+        — €2.668/m²
+      </p>
+      <p class="listing-desc">Das im Jahre 1996 erbaute und 2004 letztmalig modernisierte Objekt präsentiert sich in einem nahezu neuwertigen Zustand. Mit insgesamt 8 Zimmern, die sich über zwei Etagen...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/fa27b1ea-ee2c-4132-a5bf-903e11ebbd0f"><img class="listing-img" src="https://mms.immowelt.de/d/6/3/d/d63dd50e-9771-4f18-9932-9f8aafc3ebef.jpg?ci_seal=761007a851d83227014cdaad7a3175a017ae249b" alt="Reihenendhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#46</span>
         <a href="https://www.immowelt.de/expose/fa27b1ea-ee2c-4132-a5bf-903e11ebbd0f">Reihenendhaus zum Kauf</a>
-        <span class="listing-score mid">53</span>
+        <span class="listing-score score-mid">53</span>
       </p>
       <p class="listing-meta">
         <span class="price">€795.000</span> —
@@ -845,16 +1069,18 @@
         
          — Energy: C
         — 23km coast
+        — €4.732/m²
       </p>
       <p class="listing-desc">Zum Verkauf steht ein Reihenendhaus. In ruhiger Lage direkt am Deich liegt dieses Reihenendhaus im nordischen Stil über vier Ebenen mit rund 168 qm Grundfläche. Inmitten einer...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/054b5489-b39e-4720-923a-e14ac9c5153e"><img class="listing-img" src="https://mms.immowelt.de/0/2/d/f/02dfadfe-80d1-4238-8de6-0a5fa11f6c0f.jpg?ci_seal=2f232177608b85c3a181166c6b931561fafcd92c" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#47</span>
         <a href="https://www.immowelt.de/expose/054b5489-b39e-4720-923a-e14ac9c5153e">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">53</span>
+        <span class="listing-score score-mid">53</span>
       </p>
       <p class="listing-meta">
         <span class="price">€399.000</span> —
@@ -865,36 +1091,110 @@
         
          — Energy: H
         — 4km coast
+        — €2.889/m²
       </p>
       <p class="listing-desc">Ein familienfreundliches Einfamilienhaus mit Charakter und großem Potenzial wartet in einer der beliebtesten Wohnlagen von Kiel-Hassee auf seine nächste Generation. Das ca. 1964...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f"><img class="listing-img" src="https://mms.immowelt.de/6/9/a/2/69a25440-6e68-40ba-8995-5277129eaccb.jpg?ci_seal=9647bd47330cd99cf46916a724dab800a15e5215" alt="Bungalow zum Kauf"></a>
+      <a href="https://www.kleinanzeigen.de/s-anzeige/unser-preisgekroentes-aktionshaus-schluesselfertig-inkl-grundstueck/3199183785-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/63/6313391a-1b64-4649-90f9-d9c3baf0fcd7?rule=$_59.AUTO" alt="Unser preisgekröntes Aktionshaus (schlüsselfertig) inkl. Grundstück"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f">Bungalow zum Kauf</a>
-        <span class="listing-score mid">52</span>
+        <span class="listing-rank">#48</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/unser-preisgekroentes-aktionshaus-schluesselfertig-inkl-grundstueck/3199183785-208-243">Unser preisgekröntes Aktionshaus (schlüsselfertig) inkl. Grundstück</a>
+        <span class="listing-score score-mid">53</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€399.000</span> —
-        106m² —
-        Sassnitz, MV
-         — Plot: 523m²
+        <span class="price">€480.000</span> —
+        163m² —
+        Greifswald, MV
+        
+         — 5 rooms
+        
+        
+        — 11km coast
+        — €2.945/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Unser aktuelles Aktionshaus!!
+Das Modell 16.01.s von massa Haus vereint...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/dachterrasse-mit-blick-auf-wald-und-wiese-geraeumiges-wohnen-in-beliebter-lage/3225892777-208-136"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c6bfe502-c45d-4b90-a0b3-ddefff05deef?rule=$_59.AUTO" alt="Dachterrasse mit Blick auf Wald und Wiese - Geräumiges Wohnen in beliebter Lage"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#49</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/dachterrasse-mit-blick-auf-wald-und-wiese-geraeumiges-wohnen-in-beliebter-lage/3225892777-208-136">Dachterrasse mit Blick auf Wald und Wiese - Geräumiges Wohnen in beliebter Lage</a>
+        <span class="listing-score score-mid">53</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€390.000</span> —
+        142m² —
+        Stralsund, MV
+        
          — 4 rooms
         
-         — Energy: C
-        — 15km coast
+        
+        — 2km coast
+        — €2.746/m²
       </p>
-      <p class="listing-desc">Ankommen und Wohlfühlen auf der Sonneninsel Willkommen in Ihrem neuen Zuhause in der Hafenstadt Sassnitz - einem der charmantesten Orte auf der Sonneninsel Rügen. Sie sind...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p class="listing-desc">Objektbeschreibung:
+Dieses gepflegte Einfamilienhaus aus dem Baujahr 1980 bietet mit einer...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb"><img class="listing-img" src="https://mms.immowelt.de/e/b/b/4/ebb43aa9-30cb-4ba4-99d1-0bb9c77f685a.jpg?ci_seal=197dea3404f5dafea6efef377611ad3aaab8bd3c" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#50</span>
+        <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-mid">52</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€659.000</span> —
+        220m² —
+        Krummin, MV
+         — Plot: 1585m²
+         — 9 rooms
+        
+        
+        — 5km coast
+        — €2.995/m²
+      </p>
+      <p class="listing-desc">Das Objekt wird z.Z. als Ferienvermietung genutzt und steht mit der kompletten Einrichtung zum Verkauf. Kein Mietkauf. Das Wohnhaus sowie das Nebengebäude wurden 1998 nach einem...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/ein-raumwunder-auf-130m-inkl-grundstueck-schluesselfertig-/3198359325-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/4b/4b6758fc-ba55-42fc-83cc-bf825ab03d4e?rule=$_59.AUTO" alt="Ein Raumwunder auf 130m² inkl. Grundstück (Schlüsselfertig)"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#51</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/ein-raumwunder-auf-130m-inkl-grundstueck-schluesselfertig-/3198359325-208-243">Ein Raumwunder auf 130m² inkl. Grundstück (Schlüsselfertig)</a>
+        <span class="listing-score score-mid">52</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€449.000</span> —
+        129m² —
+        Greifswald, MV
+        
+         — 5 rooms
+        
+        
+        — 11km coast
+        — €3.481/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/0a0a72ee-cee9-40a5-8091-ede22cd079e9"><img class="listing-img" src="https://mms.immowelt.de/b/f/7/8/bf78953e-fa20-428c-b58c-c5fb07029722.jpg?ci_seal=7bb5d0845bea2f97d942111fdfd6f263796f6eda" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#52</span>
         <a href="https://www.immowelt.de/expose/0a0a72ee-cee9-40a5-8091-ede22cd079e9">Bungalow zum Kauf</a>
-        <span class="listing-score mid">51</span>
+        <span class="listing-score score-mid">51</span>
       </p>
       <p class="listing-meta">
         <span class="price">€595.000</span> —
@@ -905,36 +1205,62 @@
         
          — Energy: A+
         — 5km coast
+        — €4.161/m²
       </p>
       <p class="listing-desc">Energieeffizienter, neuwertiger Bungalow mit hochwertiger Ausstattung, Klima, Kamin, Pool, Smart-Home-System u.v.m. - alles auf einer Ebene! Willkommen in Ihrem neuen Zuhause!...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/projekte/expose/k2rd532"><img class="listing-img" src="https://mms.immowelt.de/e/a/d/f/eadfd3a0-c4db-434d-bb18-981812e040e5.jpg?ci_seal=dfebc7abfe36c7443928f1294d116e43855182e0" alt="Reihenmittelhaus zum Kauf - Neubau"></a>
+      <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f"><img class="listing-img" src="https://mms.immowelt.de/6/9/a/2/69a25440-6e68-40ba-8995-5277129eaccb.jpg?ci_seal=9647bd47330cd99cf46916a724dab800a15e5215" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/projekte/expose/k2rd532">Reihenmittelhaus zum Kauf - Neubau</a>
-        <span class="listing-score mid">51</span>
+        <span class="listing-rank">#53</span>
+        <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f">Bungalow zum Kauf</a>
+        <span class="listing-score score-mid">51</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€380.190</span> —
-        101.74m² —
-        Ribnitz-Damgarten, MV
-         — Plot: 231m²
-         — 3 rooms
+        <span class="price">€399.000</span> —
+        106m² —
+        Sassnitz, MV
+         — Plot: 523m²
+         — 4 rooms
         
-        
-        — 12km coast
+         — Energy: C
+        — 15km coast
+        — €3.764/m²
       </p>
-      <p class="listing-desc">Ihr neues Zuhause bietet Ihnen viel Raum zur Entspannung. Willkommen in Ihrem neuen Zuhause, einem modernen Reihenhaus mit offener Raumgestaltung. Betreten Sie den...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p class="listing-desc">Ankommen und Wohlfühlen auf der Sonneninsel Willkommen in Ihrem neuen Zuhause in der Hafenstadt Sassnitz - einem der charmantesten Orte auf der Sonneninsel Rügen. Sie sind...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6"><img class="listing-img" src="https://mms.immowelt.de/c/f/4/f/cf4f5ed5-a65b-4bb5-9d81-26789753b2e8.jpg?ci_seal=f67da8d45b7ac29636a211215b707ee670eea70e" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#54</span>
+        <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6">Villa zum Kauf</a>
+        <span class="listing-score score-mid">50</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€318.200</span> —
+        129m² —
+        Bad Segeberg, SH
+        
+         — 4 rooms
+        
+         — Energy: A
+        — 37km coast
+        — €2.467/m²
+      </p>
+      <p class="listing-desc">Diese Stadtvilla besticht durch Ihre Klarheit und Moderne bis unter das Dach. Der Grundriss ist für Sie noch Variabel und kann angepasst werden. Sie erhalten die Stadtvillla...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/projekte/expose/k2rd532"><img class="listing-img" src="https://mms.immowelt.de/e/4/e/7/e4e7358f-46c2-4a8d-8d84-5e05faececa9.jpg?ci_seal=8f8fe9ce35e2c38535658648c1387ca3715219ed" alt="Reihenmittelhaus zum Kauf - Neubau"></a>
       <p class="listing-title">
+        <span class="listing-rank">#55</span>
         <a href="https://www.immowelt.de/projekte/expose/k2rd532">Reihenmittelhaus zum Kauf - Neubau</a>
-        <span class="listing-score mid">50</span>
+        <span class="listing-score score-mid">50</span>
       </p>
       <p class="listing-meta">
         <span class="price">€435.860</span> —
@@ -945,56 +1271,40 @@
         
         
         — 12km coast
+        — €4.261/m²
       </p>
       <p class="listing-desc">In diesem geräumigen Haus mit Terrasse, Garten und einem hellen Wohnzimmer können Sie viele gesellige Stunden erleben. Willkommen in Ihrem neuen Zuhause, das Komfort und Stil...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
-      <a href="https://www.immowelt.de/expose/23fq9c8ged4p"><img class="listing-img" src="https://mms.immowelt.de/a/5/b/8/a5b81893-1120-4a01-ae66-f5a82f0a9ace.jpg?ci_seal=a3d8e8fc0330c409eca308b5a0ad70ba1f9282e5" alt="Reihenmittelhaus zum Kauf"></a>
+      <a href="https://www.immowelt.de/projekte/expose/k2rd532"><img class="listing-img" src="https://mms.immowelt.de/e/a/d/f/eadfd3a0-c4db-434d-bb18-981812e040e5.jpg?ci_seal=dfebc7abfe36c7443928f1294d116e43855182e0" alt="Reihenmittelhaus zum Kauf - Neubau"></a>
       <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/23fq9c8ged4p">Reihenmittelhaus zum Kauf</a>
-        <span class="listing-score mid">50</span>
+        <span class="listing-rank">#56</span>
+        <a href="https://www.immowelt.de/projekte/expose/k2rd532">Reihenmittelhaus zum Kauf - Neubau</a>
+        <span class="listing-score score-mid">50</span>
       </p>
       <p class="listing-meta">
-        <span class="price">€748.000</span> —
-        168m² —
-        Rostock, MV
-         — Plot: 88m²
-         — 5 rooms
+        <span class="price">€380.190</span> —
+        101.74m² —
+        Ribnitz-Damgarten, MV
+         — Plot: 231m²
+         — 3 rooms
         
-         — Energy: C
-        — 8km coast
-      </p>
-      <p class="listing-desc">Das Reihenmittelhaus verfügt über 5 Zimmer + Dachzimmer mit Schräge. Das Haus hat in südlicher Ausrichtung eine überdachte Terrasse, eine Dachterrasse sowie einen Balkon mit Blick...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
-      <p class="listing-reason">Private seller</p>
-    </div>
-    <div class="listing">
-      <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32"><img class="listing-img" src="https://mms.immowelt.de/6/d/3/1/6d31d059-86c5-470f-b6be-40f5a993a61c.jpg?ci_seal=ad531127d45beff3cb090ab09c5516d6e2abf2a0" alt="Einfamilienhaus zum Kauf"></a>
-      <p class="listing-title">
-        <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">50</span>
-      </p>
-      <p class="listing-meta">
-        <span class="price">€599.000</span> —
-        188m² —
-        Greifswald, MV
-         — Plot: 609m²
-         — 5 rooms
         
-         — Energy: D
-        — 11km coast
+        — 12km coast
+        — €3.737/m²
       </p>
-      <p class="listing-desc">Kurzbeschreibung Ein Traum. Ein Haus. Dein Haus. Objekt In der charmanten Stadt Greifswald befindet sich dieses wunderschöne Einfamilienhaus, das ideal für Familien mit Kindern...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p class="listing-desc">Ihr neues Zuhause bietet Ihnen viel Raum zur Entspannung. Willkommen in Ihrem neuen Zuhause, einem modernen Reihenhaus mit offener Raumgestaltung. Betreten Sie den...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/e9e6991b-9cf3-45e8-90bd-856059d61428"><img class="listing-img" src="https://mms.immowelt.de/3/e/5/b/3e5bada3-a937-4c95-92da-932d7b18fb53.jpg?ci_seal=61924aefb85a0145fcfd776fcfe6ae33a341af08" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#57</span>
         <a href="https://www.immowelt.de/expose/e9e6991b-9cf3-45e8-90bd-856059d61428">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score mid">50</span>
+        <span class="listing-score score-mid">50</span>
       </p>
       <p class="listing-meta">
         <span class="price">€985.000</span> —
@@ -1005,16 +1315,40 @@
         
          — Energy: B
         — 52km coast
+        — €2.109/m²
       </p>
       <p class="listing-desc">Dieses außergewöhnlich großzügige Einfamilienhaus wurde 1974 mit Teilkeller errichtet und bietet ca. 467?m² Wohnfläche voller Möglichkeiten. Im Erdgeschoss erwarten Sie ca. 264?m²...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef"><img class="listing-img" src="https://mms.immowelt.de/7/0/7/4/70741994-6419-4f3d-a309-2c74f9d8e53b.jpg?ci_seal=45165905c695bce0b7a6d4b11764a662b9707c20" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#58</span>
+        <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef">Villa zum Kauf</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€1.950.000</span> —
+        546m² —
+        Rellingen, SH
+         — Plot: 2149m²
+         — 14 rooms
+        
+        
+        — 75km coast
+        — €3.571/m²
+      </p>
+      <p class="listing-desc">Eine Villa mit Geschichte! Die Villa &quot;Schirmer`s Ruh&quot; ist ein besonderes Schmuckstück und weit über Rellingen hinaus bekannt. Die ca. 1901 errichtete, repräsentative Villa...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/413407ea-cc63-4cfd-a27b-f643348e193d"><img class="listing-img" src="https://mms.immowelt.de/d/d/9/a/dd9a167b-885c-4c39-8985-52d61fdc09a1.jpg?ci_seal=2ffb64a19f559701c4fb132a1a2ddb0b2a57c1c7" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#59</span>
         <a href="https://www.immowelt.de/expose/413407ea-cc63-4cfd-a27b-f643348e193d">Einfamilienhaus zum Kauf</a>
-        <span class="listing-score ">49</span>
+        <span class="listing-score score-low">49</span>
       </p>
       <p class="listing-meta">
         <span class="price">€450.000</span> —
@@ -1025,16 +1359,18 @@
         
         
         — 8km coast
+        — €1.250/m²
       </p>
       <p class="listing-desc">Ein absolut idyllisches Areal mit Bestandsgebäuden und eigenem Waldstück bilden eine seltene Möglichkeit mit Ausrichtung Travemünde/Ostsee. Allein die enorme Größe und...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
     <div class="listing">
       <a href="https://www.immowelt.de/expose/136bf815-149f-4234-a13a-6994e90f3505"><img class="listing-img" src="https://mms.immowelt.de/8/b/1/8/8b1884cf-0c4c-492f-b8a0-7a9e01749303.jpg?ci_seal=c35e3e9c4b64d9fd31ce1657cc3847025f4caa3b" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <span class="listing-rank">#60</span>
         <a href="https://www.immowelt.de/expose/136bf815-149f-4234-a13a-6994e90f3505">Haus zum Kauf</a>
-        <span class="listing-score ">49</span>
+        <span class="listing-score score-low">49</span>
       </p>
       <p class="listing-meta">
         <span class="price">€380.000</span> —
@@ -1045,15 +1381,914 @@
         
          — Energy: C
         — 13km coast
+        — €1.456/m²
       </p>
       <p class="listing-desc">Lassen Sie sich inspirieren und leben Sie sich aus ! Das großzügig geschnittene Grundstück mit den vorhandenen Gebäuden bietet viele Gestaltungsmöglichkeiten und kann sofort...</p>
-      <p style="margin-top: 4px;"><span class="tag new">NEW</span></p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/23fq9c8ged4p"><img class="listing-img" src="https://mms.immowelt.de/a/5/b/8/a5b81893-1120-4a01-ae66-f5a82f0a9ace.jpg?ci_seal=a3d8e8fc0330c409eca308b5a0ad70ba1f9282e5" alt="Reihenmittelhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#61</span>
+        <a href="https://www.immowelt.de/expose/23fq9c8ged4p">Reihenmittelhaus zum Kauf</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€748.000</span> —
+        168m² —
+        Rostock, MV
+         — Plot: 88m²
+         — 5 rooms
+        
+         — Energy: C
+        — 8km coast
+        — €4.452/m²
+      </p>
+      <p class="listing-desc">Das Reihenmittelhaus verfügt über 5 Zimmer + Dachzimmer mit Schräge. Das Haus hat in südlicher Ausrichtung eine überdachte Terrasse, eine Dachterrasse sowie einen Balkon mit Blick...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32"><img class="listing-img" src="https://mms.immowelt.de/6/d/3/1/6d31d059-86c5-470f-b6be-40f5a993a61c.jpg?ci_seal=ad531127d45beff3cb090ab09c5516d6e2abf2a0" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#62</span>
+        <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€599.000</span> —
+        188m² —
+        Greifswald, MV
+         — Plot: 609m²
+         — 5 rooms
+        
+         — Energy: D
+        — 11km coast
+        — €3.186/m²
+      </p>
+      <p class="listing-desc">Kurzbeschreibung Ein Traum. Ein Haus. Dein Haus. Objekt In der charmanten Stadt Greifswald befindet sich dieses wunderschöne Einfamilienhaus, das ideal für Familien mit Kindern...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/8847f65b-1f6e-48e8-9cad-156ec6b0f57a"><img class="listing-img" src="https://mms.immowelt.de/f/b/f/0/fbf07855-fc6a-4ef6-b914-a7b20db6712f.jpg?ci_seal=2c858e3683b1b56901a9bea8700ed48eebab2044" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#63</span>
+        <a href="https://www.immowelt.de/expose/8847f65b-1f6e-48e8-9cad-156ec6b0f57a">Haus zum Kauf</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€849.000</span> —
+        178m² —
+        Stralsund, MV
+         — Plot: 110m²
+         — 8 rooms
+        
+         — Energy: C
+        — 4km coast
+        — €4.770/m²
+      </p>
+      <p class="listing-desc">In stark nachgefragter, zentraler Lage befindet sich das angebotene Wohn- und Geschäftshaus in der Altstadt der Hansestadt Stralsund. Anfang des 20. Jahrhunderts errichtet,...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/725ea207-d0c5-48a8-8920-efd31b78cb36"><img class="listing-img" src="https://mms.immowelt.de/7/a/a/5/7aa5dec5-7323-43b3-9967-7d9f26c23f8c.jpg?ci_seal=9295bbdbadc29315a0e179a03dd31b1962e68adc" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#64</span>
+        <a href="https://www.immowelt.de/expose/725ea207-d0c5-48a8-8920-efd31b78cb36">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€499.000</span> —
+        225.65m² —
+        Poggensee, SH
+         — Plot: 844m²
+         — 8 rooms
+        
+         — Energy: A
+        — 40km coast
+        — €2.211/m²
+      </p>
+      <p class="listing-desc">Dieses gepflegte, freistehende Einfamilienhaus aus dem Baujahr 2005 bietet mit ca. 226 m² Wohnfläche, insgesamt 8 Zimmern und einem ca. 844 m² großen Grundstück außergewöhnlich...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-rueckzugsort-fuer-die-ganze-familie/3287617347-208-9540"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/91/910fc0de-a12e-4c23-a56e-16a077fb8aa7?rule=$_59.AUTO" alt="Ihr Rückzugsort für die ganze Familie"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#65</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-rueckzugsort-fuer-die-ganze-familie/3287617347-208-9540">Ihr Rückzugsort für die ganze Familie</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€560.000</span> —
+        144m² —
+        Gehlsdorf, MV
+        
+         — 5 rooms
+        
+        
+        — 3km coast
+        — €3.889/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Du suchst 5 Zimmer, Küche, Bad für dich und deine Lieben? Du brauchst 5 Zimmer,...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/stattlicher-altbau-in-zentraler-lage-der-gemeinde-kronshagen/3231702068-208-705"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/af/afd269ca-245a-48e0-ac1b-9035f046e86b?rule=$_59.AUTO" alt="Stattlicher Altbau in zentraler Lage der Gemeinde Kronshagen"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#66</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/stattlicher-altbau-in-zentraler-lage-der-gemeinde-kronshagen/3231702068-208-705">Stattlicher Altbau in zentraler Lage der Gemeinde Kronshagen</a>
+        <span class="listing-score score-low">49</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€620.000</span> —
+        142m² —
+        Kronshagen, SH
+        
+         — 6 rooms
+        
+        
+        — 3km coast
+        — €4.366/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+In zentraler und begehrter Lage der Gemeinde Kronshagen präsentiert sich dieses...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1"><img class="listing-img" src="https://mms.immowelt.de/e/b/f/f/ebff77c2-268a-434f-882c-4a8107844ee4.jpg?ci_seal=b6c32756a35f8eac922f6a5d0c3489eb8bc513c4" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#67</span>
+        <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1">Villa zum Kauf</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€2.190.000</span> —
+        544m² —
+        Aumühle, SH
+         — Plot: 2594m²
+         — 20 rooms
+        
+         — Energy: F
+        — 59km coast
+        — €4.026/m²
+      </p>
+      <p class="listing-desc">Ihre Traumvilla mit viel Platz zum Wohnen, Arbeiten und Hobbys - COURTAGEFREI</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/residieren-in-bestlage-ihre-repraesentative-stadtvilla-am-wiesengrund/3337751791-208-16631"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/f7/f7dce29a-c893-4621-8547-8de61e8a69f0?rule=$_59.AUTO" alt="Residieren in Bestlage: Ihre repräsentative Stadtvilla am Wiesengrund"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#68</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/residieren-in-bestlage-ihre-repraesentative-stadtvilla-am-wiesengrund/3337751791-208-16631">Residieren in Bestlage: Ihre repräsentative Stadtvilla am Wiesengrund</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€349.500</span> —
+        161m² —
+        Wittenförden, MV
+        
+         — 5 rooms
+        
+        
+        — 31km coast
+        — €2.171/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-architektenhaus-modern-lichtdurchflutet/3337689129-208-29181"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/68/6821525c-9c5c-4f09-bd3d-b20b22747821?rule=$_59.AUTO" alt="Großzügiges Architektenhaus - Modern &amp; Lichtdurchflutet"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#69</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-architektenhaus-modern-lichtdurchflutet/3337689129-208-29181">Großzügiges Architektenhaus - Modern &amp; Lichtdurchflutet</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€396.800</span> —
+        185m² —
+        Lübstorf, MV
+        
+         — 6 rooms
+        
+        
+        — 20km coast
+        — €2.145/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-stadtvilla-in-goerries-ruhig-wohnen-schnell-in-der-city/3337545363-208-16520"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/40/40564c13-c7cc-48ce-bf11-7d59a51accfd?rule=$_59.AUTO" alt="NEUBAU | Stadtvilla in Görries - Ruhig wohnen, schnell in der City"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#70</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-stadtvilla-in-goerries-ruhig-wohnen-schnell-in-der-city/3337545363-208-16520">NEUBAU | Stadtvilla in Görries - Ruhig wohnen, schnell in der City</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€349.500</span> —
+        161m² —
+        Görries, MV
+        
+         — 5 rooms
+        
+        
+        — 33km coast
+        — €2.171/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-moderne-stadtvilla-in-randlage-der-landeshauptstadt/3337338631-208-284"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/6e/6e209d60-6bf5-40e6-9544-3c2bd9d10f76?rule=$_59.AUTO" alt="NEUBAU | Moderne Stadtvilla in Randlage der Landeshauptstadt"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#71</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-moderne-stadtvilla-in-randlage-der-landeshauptstadt/3337338631-208-284">NEUBAU | Moderne Stadtvilla in Randlage der Landeshauptstadt</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€349.500</span> —
+        161m² —
+        Altstadt, MV
+        
+         — 5 rooms
+        
+        
+        — 73km coast
+        — €2.171/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/denkmalgeschuetzte-stadtvilla-mit-charme-im-herzen-von-schwerin-liebhaberstueck/3323945176-208-284"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2b/2bdfbd74-343f-4cc2-ad7a-29687fc27798?rule=$_59.AUTO" alt="Denkmalgeschützte Stadtvilla mit Charme im Herzen von Schwerin - Liebhaberstück"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#72</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/denkmalgeschuetzte-stadtvilla-mit-charme-im-herzen-von-schwerin-liebhaberstueck/3323945176-208-284">Denkmalgeschützte Stadtvilla mit Charme im Herzen von Schwerin - Liebhaberstück</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€830.000</span> —
+        403m² —
+        Altstadt, MV
+        
+         — 10 rooms
+        
+        
+        — 73km coast
+        — €2.060/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Das beeindruckende Mehrfamilienhaus aus dem Jahre 1890, das sich seit 135...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/5932f91e-abec-41dd-98b0-03a418117dec"><img class="listing-img" src="https://mms.immowelt.de/e/7/0/a/e70a696f-bc2b-43dc-a09d-b8583a2d00e0.jpg?ci_seal=f01f1b224324d6c9ea7cdac757be20ff87fa7b44" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#73</span>
+        <a href="https://www.immowelt.de/expose/5932f91e-abec-41dd-98b0-03a418117dec">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€430.000</span> —
+        213m² —
+        Rukieten / Göldenitz, MV
+         — Plot: 5612m²
+         — 7 rooms
+        
+         — Energy: D
+        — 25km coast
+        — €2.019/m²
+      </p>
+      <p class="listing-desc">Dieses großzügige Massivhaus mit idyllischer Feldrandlage von Rukieten bei Schwaan vereint ländliche Ruhe mit beeindruckendem Raum- und Grundstücksangebot - ideal für Familien,...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/4440cdfc-5c7a-46b4-93a2-96d1c1e97a9c"><img class="listing-img" src="https://mms.immowelt.de/b/e/4/e/be4e7cca-a3a6-407e-b87d-c8485b6b29b5.jpg?ci_seal=b150572354cc75bcd7e229e86a38908c70c1e340" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#74</span>
+        <a href="https://www.immowelt.de/expose/4440cdfc-5c7a-46b4-93a2-96d1c1e97a9c">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€360.000</span> —
+        245m² —
+        Parchim, MV
+         — Plot: 910m²
+         — 6 rooms
+        
+         — Energy: C
+        — 51km coast
+        — €1.469/m²
+      </p>
+      <p class="listing-desc">Das freistehende Einfamilienhaus wurde in massiver Bauweise errichtet. Im Obergeschoss des Objektes befindet sich eine ca. 110 m² große Einliegerwohnung. Das optimal geschnittene...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/7c87501d-01b1-48e8-979a-cca55b5d8cbe"><img class="listing-img" src="https://mms.immowelt.de/e/1/7/b/e17bf97c-f1cf-4aa6-bfa7-68131596b5d6.jpg?ci_seal=2f47b4829c1b881c05db108095f15eb965f2f18c" alt="Einfamilienhaus zum Kauf - Erstbezug"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#75</span>
+        <a href="https://www.immowelt.de/expose/7c87501d-01b1-48e8-979a-cca55b5d8cbe">Einfamilienhaus zum Kauf - Erstbezug</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€384.000</span> —
+        162m² —
+        Demmin, MV
+         — Plot: 850m²
+         — 5 rooms
+        
+         — Energy: A
+        — 39km coast
+        — €2.370/m²
+      </p>
+      <p class="listing-desc">ALLES AUF EINEN BLICK: !! Grundstück vorhanden - für nähere Informationen bitte bei mir melden oder eine Anfrage stellen. + große Wohnfläche, lichtdurchflutetes Esszimmer mit...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/9f5d7f0d-88e2-4a12-b158-f6d4fe279598"><img class="listing-img" src="https://mms.immowelt.de/c/5/d/7/c5d7fe86-4f06-4309-830a-78ced8dbd874.jpg?ci_seal=47e24efa218f1a80b661ef6499b9b7684fd446b2" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#76</span>
+        <a href="https://www.immowelt.de/expose/9f5d7f0d-88e2-4a12-b158-f6d4fe279598">Haus zum Kauf</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€349.000</span> —
+        379m² —
+        Damsdorf, SH
+         — Plot: 15485m²
+         — 12 rooms
+        
+        
+        — 31km coast
+        — €921/m²
+      </p>
+      <p class="listing-desc">Ihr großer Traum ist ein eigener Resthof? Sie möchten aus altem Bestand Ihren persönlichen Traumhof gestalten? Sie suchen ein Anwesen mit großzügiger Wohnfläche und wünschen sich...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/charmantes-zweifamilienhaus-mit-historischem-flair-in-rostock-warnemuende/3258815517-208-143"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2c/2cbc11c3-f545-43ae-b0ff-8991f6839a89?rule=$_59.AUTO" alt="Charmantes Zweifamilienhaus mit historischem Flair in Rostock-Warnemünde"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#77</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/charmantes-zweifamilienhaus-mit-historischem-flair-in-rostock-warnemuende/3258815517-208-143">Charmantes Zweifamilienhaus mit historischem Flair in Rostock-Warnemünde</a>
+        <span class="listing-score score-low">48</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€799.000</span> —
+        133m² —
+        Seebad Warnemünde, MV
+        
+         — 8 rooms
+        
+        
+        — 4km coast
+        — €6.008/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Dieses außergewöhnliche Anwesen in begehrter Lage von Warnemünde vereint...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df"><img class="listing-img" src="https://mms.immowelt.de/a/a/3/2/aa3263df-3cc1-4191-b580-f89561334825.jpg?ci_seal=08c9d85570e0b7fe15072449381cec27fa91effa" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#78</span>
+        <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df">Villa zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€950.000</span> —
+        228m² —
+        Waren (Müritz), MV
+         — Plot: 1200m²
+         — 9 rooms
+        
+         — Energy: C
+        — 75km coast
+        — €4.167/m²
+      </p>
+      <p class="listing-desc">Dieses schöne Anwesen liegt eher etwas versteckt am Rande einer Reihe sehr attraktiver Grundstücke am Müritz-Ufer und wirkt vielleicht auf den ersten Blick etwas unscheinbar. Doch...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a"><img class="listing-img" src="https://mms.immowelt.de/8/4/1/1/841168fb-4347-4204-9435-986f3d762b8e.jpg?ci_seal=7466d584e50db4be07f73ec403c09923072b0af1" alt="Villa zum Kauf - Erstbezug"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#79</span>
+        <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a">Villa zum Kauf - Erstbezug</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€729.000</span> —
+        180m² —
+        Klütz, MV
+         — Plot: 666m²
+         — 9 rooms
+        
+         — Energy: A+
+        — 16km coast
+        — €4.050/m²
+      </p>
+      <p class="listing-desc">Wohnen an der Ostsee jetzt auch zu Mieten</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/repraesentative-stadtvilla-nahe-schwerin-lichtdurchflutetes-wohnen-auf-zwei-ebenen/3337736056-208-271"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/dc/dcf8075b-90a9-42a8-91f7-7741333742fc?rule=$_59.AUTO" alt="Repräsentative Stadtvilla nahe Schwerin: Lichtdurchflutetes Wohnen auf zwei Ebenen"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#80</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/repraesentative-stadtvilla-nahe-schwerin-lichtdurchflutetes-wohnen-auf-zwei-ebenen/3337736056-208-271">Repräsentative Stadtvilla nahe Schwerin: Lichtdurchflutetes Wohnen auf zwei Ebenen</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€371.000</span> —
+        134m² —
+        Brüsewitz, MV
+        
+         — 5 rooms
+        
+        
+        — 28km coast
+        — €2.769/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-luebstorf-stilvoll-wohnen-nahe-schwerin/3337677152-208-29181"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/cd/cde3ade2-07c5-4787-91bd-ae705853a5b4?rule=$_59.AUTO" alt="Moderne Stadtvilla in Lübstorf - Stilvoll wohnen nahe Schwerin"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#81</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-luebstorf-stilvoll-wohnen-nahe-schwerin/3337677152-208-29181">Moderne Stadtvilla in Lübstorf - Stilvoll wohnen nahe Schwerin</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€371.000</span> —
+        134m² —
+        Lübstorf, MV
+        
+         — 5 rooms
+        
+        
+        — 20km coast
+        — €2.769/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-pinnow-stilvoll-wohnen-nahe-schwerin/3337600173-208-16618"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/e1/e1142c2f-97e6-43ae-b557-23a47b18cdea?rule=$_59.AUTO" alt="Moderne Stadtvilla in Pinnow - Stilvoll wohnen nahe Schwerin"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#82</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-pinnow-stilvoll-wohnen-nahe-schwerin/3337600173-208-16618">Moderne Stadtvilla in Pinnow - Stilvoll wohnen nahe Schwerin</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€371.000</span> —
+        134m² —
+        Pinnow, MV
+        
+         — 5 rooms
+        
+        
+        — 32km coast
+        — €2.769/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Raus aus der Miete, rein ins Eigenheim!
+Verwirklichen Sie Ihren Wohntraum auf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/91e8d215-29a7-46f1-bc80-b01809f4c35a"><img class="listing-img" src="https://mms.immowelt.de/5/a/8/e/5a8e927f-43cc-4cde-aaaa-ae6f649ab638.jpg?ci_seal=48e563fa9f41c7121a2436974a419c9af24e03b1" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#83</span>
+        <a href="https://www.immowelt.de/expose/91e8d215-29a7-46f1-bc80-b01809f4c35a">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€359.000</span> —
+        122m² —
+        Prohn, MV
+         — Plot: 829m²
+         — 5 rooms
+        
+         — Energy: C
+        — 8km coast
+        — €2.943/m²
+      </p>
+      <p class="listing-desc">Sie sind auf der Suche nach einem Einfamilienhaus in einer ruhigen Wohngegend, ohne dabei weit ab vom Schuss zu sein? Dann sind Sie hier genau richtig! Dieses wunderschöne Haus...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/765bab83-aa02-4ba6-8bf7-4e3be34724c2"><img class="listing-img" src="https://mms.immowelt.de/1/3/6/4/13644012-7ee9-4721-953a-0de538668f0a.jpg?ci_seal=516fd009ecdf6a0cbb8afcdfdd502c0fb8d3a531" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#84</span>
+        <a href="https://www.immowelt.de/expose/765bab83-aa02-4ba6-8bf7-4e3be34724c2">Haus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€375.000</span> —
+        195m² —
+        Priborn, MV
+         — Plot: 526m²
+         — 6 rooms
+        
+         — Energy: B
+        — 90km coast
+        — €1.923/m²
+      </p>
+      <p class="listing-desc">Sie suchen ein Anwesen in naturnaher Umgebung, mit viel Ruhe und Privatsphäre? - Dann haben wir die richtige Immobilie für Sie. Das Objekt befindet sich im charmanten Dorf...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/2bb3c5c3-c5e8-4eb4-bcf1-5d95b3c56f36"><img class="listing-img" src="https://mms.immowelt.de/4/7/8/2/47827e3e-fa2c-40c0-bb73-42ad8ad4aa73.jpg?ci_seal=6e2b7cd5fa76e551e50f7c4375d1b2e8e8a5c222" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#85</span>
+        <a href="https://www.immowelt.de/expose/2bb3c5c3-c5e8-4eb4-bcf1-5d95b3c56f36">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€557.000</span> —
+        203m² —
+        Parchim, MV
+         — Plot: 1094m²
+         — 5 rooms
+        
+         — Energy: A
+        — 51km coast
+        — €2.744/m²
+      </p>
+      <p class="listing-desc">Einfach einziehen, sich wohl und Zuhause fühlen - hier ist es möglich. Zum Verkauf steht ein modernes, freistehendes Haus mit schönem Garten in einem ruhigen Wohnviertel, das...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/889985a5-3d4f-454a-9136-632b0a647865"><img class="listing-img" src="https://mms.immowelt.de/7/b/9/f/7b9fa876-d5fb-4a41-b500-28b5fd4cc7b5.jpg?ci_seal=55073b82a614d7d1fc95edeaa1ff4cf846278e5d" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#86</span>
+        <a href="https://www.immowelt.de/expose/889985a5-3d4f-454a-9136-632b0a647865">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€379.000</span> —
+        182m² —
+        Sternberg, MV
+         — Plot: 670m²
+         — 6.5 rooms
+        
+         — Energy: A
+        — 25km coast
+        — €2.082/m²
+      </p>
+      <p class="listing-desc">ALLES AUF EINEN BLICK: Auf diesem oder einem weiteren Grundstück können Sie Ihr neues Traumhaus verwirklichen. Für nähere Informationen einfach bei mir melden oder eine Anfrage...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/f1fd281c-b9e8-4bfb-8263-c68ba6727a2a"><img class="listing-img" src="https://mms.immowelt.de/5/c/6/9/5c69e0d6-15ee-4ae7-ba0f-13b742b71f4a.jpg?ci_seal=b401c85ec0928cc7e64f70557935118002836254" alt="Haus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#87</span>
+        <a href="https://www.immowelt.de/expose/f1fd281c-b9e8-4bfb-8263-c68ba6727a2a">Haus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€320.000</span> —
+        140m² —
+        Malchow , Meckl, MV
+         — Plot: 1315m²
+         — 7 rooms
+        
+         — Energy: D
+        — 67km coast
+        — €2.286/m²
+      </p>
+      <p class="listing-desc">Diese liebevoll sanierte Doppelhaushälfte aus dem Baujahr 1939 vereint historischen Charme mit modernem Wohnkomfort. In den Jahren 2011 bis 2013 wurde das Haus umfassend saniert:...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/7770909c-73ab-4c49-a873-2d49a02ba22d"><img class="listing-img" src="https://mms.immowelt.de/3/1/1/a/311a0e52-eb41-46fc-9431-5ea803408f5a.jpg?ci_seal=157ff4aaada07d463d0fb678005cacc0b916092f" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#88</span>
+        <a href="https://www.immowelt.de/expose/7770909c-73ab-4c49-a873-2d49a02ba22d">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€489.000</span> —
+        230m² —
+        Bandelin, MV
+         — Plot: 3617m²
+         — 7 rooms
+        
+         — Energy: F
+        — 23km coast
+        — €2.126/m²
+      </p>
+      <p class="listing-desc">Vielseitiges Anwesen mit zwei Wohnhäusern, Poolhaus und weitläufigem Grundstück</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/a4fb0c4d-6c24-4e4c-af24-4216e5a30eb5"><img class="listing-img" src="https://mms.immowelt.de/d/0/3/e/d03e67fa-d572-4cd7-aa0f-2af59019c543.jpg?ci_seal=c5165f6ea6186c5a2444dddbb2c73f29dde9106b" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#89</span>
+        <a href="https://www.immowelt.de/expose/a4fb0c4d-6c24-4e4c-af24-4216e5a30eb5">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€429.500</span> —
+        224m² —
+        Neustrelitz, MV
+         — Plot: 2472m²
+         — 7 rooms
+        
+        
+        — 95km coast
+        — €1.917/m²
+      </p>
+      <p class="listing-desc">Dieses Einfamilienhaus aus dem Baujahr 1968 lädt dazu ein, den Alltag mit viel Raum und einer klaren, familienfreundlichen Aufteilung zu gestalten. Schon beim Ankommen entsteht...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/89e6bf28-40d0-4ff8-b1c8-2da26299a3ad"><img class="listing-img" src="https://mms.immowelt.de/c/5/7/c/c57c271f-f091-44e1-9540-45048bc33184.jpg?ci_seal=3374fed2fc6d677b2688f9397c9d6f9db71aabca" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#90</span>
+        <a href="https://www.immowelt.de/expose/89e6bf28-40d0-4ff8-b1c8-2da26299a3ad">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€495.000</span> —
+        210m² —
+        Pruchten, MV
+         — Plot: 1205m²
+         — 8 rooms
+        
+         — Energy: C
+        — 15km coast
+        — €2.357/m²
+      </p>
+      <p class="listing-desc">Dieses großzügige Zweifamilienhaus in ruhiger Lage von Pruchten OT Bresewitz bietet zwei vollwertige, separat zugängliche Wohneinheiten - jeweils als Maisonette über Erdgeschoss,...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/7c4e6bca-f721-4680-b24b-c95e6dfea2c7"><img class="listing-img" src="https://mms.immowelt.de/1/2/6/0/12608bb1-9bd5-414a-9ac7-2368c4bd352c.jpg" alt="Doppelhaushälfte zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#91</span>
+        <a href="https://www.immowelt.de/expose/7c4e6bca-f721-4680-b24b-c95e6dfea2c7">Doppelhaushälfte zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€455.000</span> —
+        198m² —
+        Gustow-OT Nesebanz, MV
+         — Plot: 1004m²
+         — 6 rooms
+        
+         — Energy: E
+        — 9km coast
+        — €2.298/m²
+      </p>
+      <p class="listing-desc">Das ursprüngliche massive Bauernhaus mit Stallanlage aus dem Jahr 1950 wurde 1991 komplett entkernt. Nach der Entkernung standen nur noch die Grundmauern und der Dachstuhl. Danach...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/3dffd356-8a05-4a9a-bde1-5da2095e79a5"><img class="listing-img" src="https://mms.immowelt.de/3/a/1/2/3a12c5c6-ef19-4e96-b681-58325232eee4.jpg?ci_seal=70fc5c83d1c56dc49373b8a8fe79bf95fe75e76b" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#92</span>
+        <a href="https://www.immowelt.de/expose/3dffd356-8a05-4a9a-bde1-5da2095e79a5">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€373.000</span> —
+        210m² —
+        Parchim, MV
+         — Plot: 630m²
+         — 6.5 rooms
+        
+         — Energy: A
+        — 51km coast
+        — €1.776/m²
+      </p>
+      <p class="listing-desc">ALLES AUF EINEN BLICK: Auf diesem oder einem weiteren Grundstück können Sie Ihr neues Traumhaus verwirklichen. Für nähere Informationen einfach bei mir melden oder eine Anfrage...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/285f910a-a18b-4a5c-9726-fda35fd67f55"><img class="listing-img" src="https://mms.immowelt.de/2/1/5/c/215c1391-7960-4876-80c9-c3f8f5d9f031.jpg?ci_seal=3a97c10b768781718dab3909da1cfba191ba5895" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#93</span>
+        <a href="https://www.immowelt.de/expose/285f910a-a18b-4a5c-9726-fda35fd67f55">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€350.000</span> —
+        172m² —
+        Jacobsdorf, MV
+         — Plot: 2584m²
+         — 7 rooms
+        
+         — Energy: F
+        — 175km coast
+        — €2.035/m²
+      </p>
+      <p class="listing-desc">Willkommen in Ihrem neuen Zuhause in Jacobsdorf, OT Sieversdorf! Dieses charmante Einfamilienhaus, das ursprünglich im Jahr 1948 erbaut und nun umfassend saniert wurde, vereint...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/8332bfb9-67d4-4820-9273-e00145ad85c8"><img class="listing-img" src="https://mms.immowelt.de/9/c/d/5/9cd57feb-003a-4f2b-8a5b-5d2ccf742313.jpg?ci_seal=7ffa9691fe03d3e7bc26c80479a8d2ce03ea7baa" alt="Einfamilienhaus zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#94</span>
+        <a href="https://www.immowelt.de/expose/8332bfb9-67d4-4820-9273-e00145ad85c8">Einfamilienhaus zum Kauf</a>
+        <span class="listing-score score-low">47</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€287.200</span> —
+        100m² —
+        Rathenow, MV
+         — Plot: 1109m²
+         — 3 rooms
+        
+        
+        — 147km coast
+        — €2.872/m²
+      </p>
+      <p class="listing-desc">In ruhiger Wohnlage von Rathenow befindet sich dieser 1988 in Massivbauweise errichtete Bungalow auf einem ca. 1.109 m² großen Gartengrundstück. Das Einfamilienhaus wurde im Jahr...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/7777715b-4d6f-478a-98e8-ed3e981b1e2f"><img class="listing-img" src="https://mms.immowelt.de/0/0/b/6/00b63c28-5e00-44bd-a971-15bd4941f1d1.jpg?ci_seal=d8d336d3ddac189ed2c8aa79488881ce8df8aac2" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#95</span>
+        <a href="https://www.immowelt.de/expose/7777715b-4d6f-478a-98e8-ed3e981b1e2f">Villa zum Kauf</a>
+        <span class="listing-score score-low">46</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€2.750.000</span> —
+        544m² —
+        Hamburg, SH
+         — Plot: 1087m²
+         — 12.5 rooms
+        
+         — Energy: F
+        — 72km coast
+        — €5.055/m²
+      </p>
+      <p class="listing-desc">- Großzügige Jugendstil Stadtvilla aus dem Jahr 1904 mit weitläufigem Grundstück - Gelegen in ruhiger Nebenstraße mit überwiegend freistehenden, repräsentativen Stadtvillen -...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/elegantes-reetdachhaus-und-separate-ferien-whg-auf-der-sonneninsel-usedom/3298600957-208-17003"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a1/a174a95e-6b23-4f70-9c45-0ebad6a45540?rule=$_59.AUTO" alt="Elegantes Reetdachhaus und separate Ferien-Whg. auf der Sonneninsel Usedom"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#96</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/elegantes-reetdachhaus-und-separate-ferien-whg-auf-der-sonneninsel-usedom/3298600957-208-17003">Elegantes Reetdachhaus und separate Ferien-Whg. auf der Sonneninsel Usedom</a>
+        <span class="listing-score score-low">46</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€429.000</span> —
+        126m² —
+        Ückeritz, MV
+        
+         — 5 rooms
+        
+        
+        — 15km coast
+        — €3.405/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung:
+Dieses Verkaufsangebot umfasst ein reetgedecktes Einfamilienhaus, ein...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/letztes-grundstueck-neubau-stadtvilla-provisionsfrei/3332601605-208-454"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/e1/e1084755-d1c4-48ae-9309-b522c8ff6c65?rule=$_59.AUTO" alt="Letztes Grundstück| Neubau Stadtvilla| provisionsfrei"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#97</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/letztes-grundstueck-neubau-stadtvilla-provisionsfrei/3332601605-208-454">Letztes Grundstück| Neubau Stadtvilla| provisionsfrei</a>
+        <span class="listing-score score-low">46</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€579.000</span> —
+        150m² —
+        Bosau, SH
+        
+         — 5 rooms
+        
+        
+        — 21km coast
+        — €3.860/m²
+      </p>
+      <p class="listing-desc">Ankommen. Durchatmen. Zuhause sein.
+Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c"><img class="listing-img" src="https://mms.immowelt.de/4/5/0/0/45005c70-9007-4cb7-b11f-9669aadc9991.jpg?ci_seal=b32a3c6e95a3cda067f3d10f4dce0cbb622476a9" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#98</span>
+        <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c">Villa zum Kauf</a>
+        <span class="listing-score score-low">45</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€1.690.000</span> —
+        333m² —
+        Hamburg-Klein Borstel, SH
+         — Plot: 792m²
+         — 10 rooms
+        
+         — Energy: E
+        — 65km coast
+        — €5.075/m²
+      </p>
+      <p class="listing-desc">Diese ausgesprochen schöne, außergewöhnliche und interessante Altbauvilla - vis á vis zum Alsterwanderweg - mit insgesamt drei Wohngeschossen wurde im Jahr 1896 mit Keller...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.immowelt.de/expose/df3cb709-9c50-404a-b67e-a74d0790713a"><img class="listing-img" src="https://mms.immowelt.de/2/1/e/f/21effc9f-9853-4dd3-84f8-eb184c0a2c0c.jpg?ci_seal=0df79ab5217abd4841f2aa8b70e8ff5e942ab546" alt="Villa zum Kauf"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#99</span>
+        <a href="https://www.immowelt.de/expose/df3cb709-9c50-404a-b67e-a74d0790713a">Villa zum Kauf</a>
+        <span class="listing-score score-low">45</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€1.595.000</span> —
+        397m² —
+        Hannover / Isernhagen-Süd, MV
+         — Plot: 2102m²
+         — 7 rooms
+        
+         — Energy: H
+        — 185km coast
+        — €4.018/m²
+      </p>
+      <p class="listing-desc">Diese klassische Stadtvilla beeindruckt nicht nur durch ihre Lage im begehrten hannoverschen Stadtteil Isernhagen-Süd, einem bevorzugten und repräsentativen Teil Hannovers in...</p>
+      <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
+      
+    </div>
+    <div class="listing">
+      <a href="https://www.kleinanzeigen.de/s-anzeige/premium-bauhaus-ferienvilla-160-m-wohnflaeche-auf-950-m-strand-fusslaeufig-mit-sauna-wallbox-/3238724856-208-21546"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/26/26379b36-40cb-41aa-8ffd-92a084a1e912?rule=$_59.AUTO" alt="Premium Bauhaus Ferienvilla – 160 m² Wohnfläche auf 950 m², Strand fußläufig, mit Sauna &amp; Wallbox!"></a>
+      <p class="listing-title">
+        <span class="listing-rank">#100</span>
+        <a href="https://www.kleinanzeigen.de/s-anzeige/premium-bauhaus-ferienvilla-160-m-wohnflaeche-auf-950-m-strand-fusslaeufig-mit-sauna-wallbox-/3238724856-208-21546">Premium Bauhaus Ferienvilla – 160 m² Wohnfläche auf 950 m², Strand fußläufig, mit Sauna &amp; Wallbox!</a>
+        <span class="listing-score score-low">43</span>
+      </p>
+      <p class="listing-meta">
+        <span class="price">€875.000</span> —
+        160m² —
+        Glowe Rügen, MV
+        
+         — 4 rooms
+        
+        
+        — 13km coast
+        — €5.469/m²
+      </p>
+      <p class="listing-desc">Objektbeschreibung
+Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie...</p>
+      <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
+      <p class="listing-reason">Private seller</p>
+    </div>
   </div>
-  
-
-  
 
   
 
@@ -1067,18 +2302,18 @@
       </tr>
       <tr>
         <td><strong>MV Coast</strong></td>
-        <td>€3.360/m²</td>
+        <td>€3.223/m²</td>
         <td>+0.0%</td>
       </tr>
       <tr>
         <td><strong>SH Coast</strong></td>
-        <td>€4.285/m²</td>
+        <td>€4.206/m²</td>
         <td>+0.0%</td>
       </tr>
     </table>
     <p class="listing-meta" style="margin-top: 12px;">
-      New this week: 218 |
-      Active: 218
+      New this week: 363 |
+      Active: 363
     </p>
   </div>
 
