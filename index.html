@@ -50,6 +50,11 @@
   .range-track { position: absolute; top: 10px; left: 0; right: 0; height: 4px; background: #e5e7eb; }
   .range-fill { position: absolute; top: 10px; height: 4px; background: #1a1a1a; }
   .filter-count { font-size: 12px; color: #666; margin-top: 8px; }
+  .fav-btn { background: none; border: none; cursor: pointer; font-size: 18px; padding: 0 4px; line-height: 1; vertical-align: middle; opacity: 0.3; transition: opacity .15s; }
+  .fav-btn:hover { opacity: 0.6; }
+  .fav-btn.active { opacity: 1; }
+  .fav-toggle { display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; margin-left: 12px; }
+  .fav-toggle.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
 </style>
 </head>
 <body>
@@ -82,14 +87,18 @@
         </div>
       </div>
     </div>
-    <div class="filter-count" id="filter-count">Showing 100 of 100 listings</div>
+    <div class="filter-count">
+      <span id="filter-count">Showing 100 of 100 listings</span>
+      <button class="fav-toggle" id="fav-toggle">Favourites</button>
+    </div>
   </div>
 
   <div class="section" id="listings-section">
     
-    <div class="listing" data-price="349000" data-area="87">
+    <div class="listing" data-price="349000" data-area="87" data-id="engel_voelkers:W-02ZOO4">
       <a href="https://www.engelvoelkers.com/de/de/exposes/477baa7e-2c6a-571f-82c7-696f9edf11fa"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/ed730f61-ba82-4ba0-8f15-99a741574d58/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Ihr Platz am Meer - sanierungsbedürftiges Wohnhaus in fußläufiger Entfernung zum Ostseestrand"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-02ZOO4" title="Add to favourites">★</button>
         <span class="listing-rank">#1</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/477baa7e-2c6a-571f-82c7-696f9edf11fa">Ihr Platz am Meer - sanierungsbedürftiges Wohnhaus in fußläufiger Entfernung zum Ostseestrand</a>
         <span class="listing-score score-mid">73</span>
@@ -109,9 +118,10 @@
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="490000" data-area="315">
+    <div class="listing" data-price="490000" data-area="315" data-id="kleinanzeigen:3337786969">
       <a href="https://www.kleinanzeigen.de/s-anzeige/attraktiver-einstieg-unter-bodenrichtwert-reetgedecktes-haus-mit-viel-raum-fuer-ihre-visionen/3337786969-208-214"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/06/068a937a-29ec-4c44-8cc0-3cd44567de23?rule=$_59.AUTO" alt="Attraktiver Einstieg unter Bodenrichtwert: Reetgedecktes Haus mit viel Raum für Ihre Visionen"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337786969" title="Add to favourites">★</button>
         <span class="listing-rank">#2</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/attraktiver-einstieg-unter-bodenrichtwert-reetgedecktes-haus-mit-viel-raum-fuer-ihre-visionen/3337786969-208-214">Attraktiver Einstieg unter Bodenrichtwert: Reetgedecktes Haus mit viel Raum für Ihre Visionen</a>
         <span class="listing-score score-mid">70</span>
@@ -132,9 +142,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="465000" data-area="102">
+    <div class="listing" data-price="465000" data-area="102" data-id="immowelt:2578Q2BKK5EQ">
       <a href="https://www.immowelt.de/expose/6487e4ba-fdc9-4c80-b381-dc16d3dcc344"><img class="listing-img" src="https://mms.immowelt.de/5/f/5/f/5f5f864c-d154-4ab0-a00d-0c8431cdf80e.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:2578Q2BKK5EQ" title="Add to favourites">★</button>
         <span class="listing-rank">#3</span>
         <a href="https://www.immowelt.de/expose/6487e4ba-fdc9-4c80-b381-dc16d3dcc344">Doppelhaushälfte zum Kauf</a>
         <span class="listing-score score-mid">69</span>
@@ -154,9 +165,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="498000" data-area="176.91">
+    <div class="listing" data-price="498000" data-area="176.91" data-id="immowelt:26QTMQ8TUYNL">
       <a href="https://www.immowelt.de/expose/1def9263-c05a-4781-bfc4-5be343df381d"><img class="listing-img" src="https://mms.immowelt.de/9/3/2/3/9323c8dc-0923-4cde-94dc-fc4bf82c9e2c.jpg?ci_seal=38d82ff4468be3d599c8ecdf62dd378094b7b41a" alt="Bungalow zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26QTMQ8TUYNL" title="Add to favourites">★</button>
         <span class="listing-rank">#4</span>
         <a href="https://www.immowelt.de/expose/1def9263-c05a-4781-bfc4-5be343df381d">Bungalow zum Kauf - Erstbezug</a>
         <span class="listing-score score-mid">67</span>
@@ -176,9 +188,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="525000" data-area="124">
+    <div class="listing" data-price="525000" data-area="124" data-id="ohne_makler:423445">
       <a href="https://www.ohne-makler.net/immobilie/423445/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDIzNDQ1LzVqNXBndW85?sig=qPl_Ar5Mz2Y79nOgzXtYWXaiBTxhG8tLqwKgB4ctdSE&exp=1772314951" alt="Charmantes Mittelreihenhaus in Scharbeutz, Königsberger Str. 1b"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:423445" title="Add to favourites">★</button>
         <span class="listing-rank">#5</span>
         <a href="https://www.ohne-makler.net/immobilie/423445/">Charmantes Mittelreihenhaus in Scharbeutz, Königsberger Str. 1b</a>
         <span class="listing-score score-mid">67</span>
@@ -198,9 +211,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="380000" data-area="100">
+    <div class="listing" data-price="380000" data-area="100" data-id="immowelt:26C1YGHBWLXH">
       <a href="https://www.immowelt.de/expose/fa4d5c1d-06bf-486f-8aa8-7450086c0347"><img class="listing-img" src="https://mms.immowelt.de/8/2/b/3/82b31025-341c-4601-993a-efb9fc228e61.jpg?ci_seal=10f9b5ff0e223aa9bf347720a10877c29244f476" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26C1YGHBWLXH" title="Add to favourites">★</button>
         <span class="listing-rank">#6</span>
         <a href="https://www.immowelt.de/expose/fa4d5c1d-06bf-486f-8aa8-7450086c0347">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">66</span>
@@ -220,9 +234,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="840000" data-area="162.7">
+    <div class="listing" data-price="840000" data-area="162.7" data-id="immowelt:25HRX85KC1EF">
       <a href="https://www.immowelt.de/expose/d4c44076-44f9-4037-a2f4-0a254b077f68"><img class="listing-img" src="https://mms.immowelt.de/d/a/5/c/da5ccc6d-6213-496b-bee5-380690d451a8.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25HRX85KC1EF" title="Add to favourites">★</button>
         <span class="listing-rank">#7</span>
         <a href="https://www.immowelt.de/expose/d4c44076-44f9-4037-a2f4-0a254b077f68">Doppelhaushälfte zum Kauf</a>
         <span class="listing-score score-mid">66</span>
@@ -242,9 +257,10 @@ In hervorragender Lage des Ostseebades Prerow, nur wenige Gehminuten vom...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="499950" data-area="110">
+    <div class="listing" data-price="499950" data-area="110" data-id="kleinanzeigen:3333228637">
       <a href="https://www.kleinanzeigen.de/s-anzeige/naturnahe-oase-ihr-zuhause-fuer-gemuetlichkeit/3333228637-208-140"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/40/403c11f6-6cd4-493f-b3b8-00d660928bca?rule=$_59.AUTO" alt="Naturnahe Oase: Ihr Zuhause für Gemütlichkeit"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3333228637" title="Add to favourites">★</button>
         <span class="listing-rank">#8</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/naturnahe-oase-ihr-zuhause-fuer-gemuetlichkeit/3333228637-208-140">Naturnahe Oase: Ihr Zuhause für Gemütlichkeit</a>
         <span class="listing-score score-mid">66</span>
@@ -265,9 +281,10 @@ Ein neues Kapitel beginnt für Ihre Familie: Gestalten Sie Ihr Traumhaus für...
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="369000" data-area="103">
+    <div class="listing" data-price="369000" data-area="103" data-id="kleinanzeigen:3261100360">
       <a href="https://www.kleinanzeigen.de/s-anzeige/wohnhaus-im-bungalowstil-4-zimmer-2-baeder-keller-terrasse-und-gartenbereich-in-luetten-klein/3261100360-208-9527"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/ba/ba888deb-a7f4-4c9c-b727-868b541991b5?rule=$_59.AUTO" alt="Wohnhaus im Bungalowstil, 4 Zimmer, 2 Bäder, Keller, Terrasse und Gartenbereich in Lütten Klein"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3261100360" title="Add to favourites">★</button>
         <span class="listing-rank">#9</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/wohnhaus-im-bungalowstil-4-zimmer-2-baeder-keller-terrasse-und-gartenbereich-in-luetten-klein/3261100360-208-9527">Wohnhaus im Bungalowstil, 4 Zimmer, 2 Bäder, Keller, Terrasse und Gartenbereich in Lütten Klein</a>
         <span class="listing-score score-mid">65</span>
@@ -288,9 +305,10 @@ Aus Diskretionsgründen handelt es sich bei dem öffentlichen Exposé in den...<
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="429000" data-area="125">
+    <div class="listing" data-price="429000" data-area="125" data-id="immowelt:25Z6LUWDSDZ9">
       <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8"><img class="listing-img" src="https://mms.immowelt.de/2/b/7/d/2b7d5a47-4e2f-4453-8d65-4d8cb68b9530.jpg?ci_seal=0c996048dfafeaed48c5cc57e3b92b087749a04d" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25Z6LUWDSDZ9" title="Add to favourites">★</button>
         <span class="listing-rank">#10</span>
         <a href="https://www.immowelt.de/expose/49186ece-cbc8-4e43-8f5e-6a902064c0b8">Haus zum Kauf</a>
         <span class="listing-score score-mid">64</span>
@@ -310,9 +328,10 @@ Aus Diskretionsgründen handelt es sich bei dem öffentlichen Exposé in den...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="475000" data-area="140">
+    <div class="listing" data-price="475000" data-area="140" data-id="immowelt:25BKUE247QQ6">
       <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864"><img class="listing-img" src="https://mms.immowelt.de/8/a/1/e/8a1ed96c-c845-4361-88ad-424752b2a0cb.jpg?ci_seal=45ac7123a13c8282a0227045a223ba4a62a24bcf" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25BKUE247QQ6" title="Add to favourites">★</button>
         <span class="listing-rank">#11</span>
         <a href="https://www.immowelt.de/expose/2a656f79-4f72-4749-9afe-3edf1a08e864">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">64</span>
@@ -332,9 +351,10 @@ Aus Diskretionsgründen handelt es sich bei dem öffentlichen Exposé in den...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="750000" data-area="252">
+    <div class="listing" data-price="750000" data-area="252" data-id="immowelt:25BEIWDFCGPS">
       <a href="https://www.immowelt.de/expose/3122adb5-f776-46b2-a81e-b16cd98a8614"><img class="listing-img" src="https://mms.immowelt.de/7/e/4/f/7e4f2a78-2180-476e-9a9a-65da9d1bebac.jpg?ci_seal=296747f90c9510d78ab4203d80b28f44c133028e" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25BEIWDFCGPS" title="Add to favourites">★</button>
         <span class="listing-rank">#12</span>
         <a href="https://www.immowelt.de/expose/3122adb5-f776-46b2-a81e-b16cd98a8614">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">64</span>
@@ -354,9 +374,10 @@ Aus Diskretionsgründen handelt es sich bei dem öffentlichen Exposé in den...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="688056" data-area="155">
+    <div class="listing" data-price="688056" data-area="155" data-id="kleinanzeigen:3325712922">
       <a href="https://www.kleinanzeigen.de/s-anzeige/massgeschneiderte-architektur-individuell-geplant-/3325712922-208-140"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/49/49ac05dc-5717-419e-b7a1-bbba330279e4?rule=$_59.AUTO" alt="Maßgeschneiderte Architektur. Individuell geplant."></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3325712922" title="Add to favourites">★</button>
         <span class="listing-rank">#13</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/massgeschneiderte-architektur-individuell-geplant-/3325712922-208-140">Maßgeschneiderte Architektur. Individuell geplant.</a>
         <span class="listing-score score-mid">64</span>
@@ -377,9 +398,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="199000" data-area="91">
+    <div class="listing" data-price="199000" data-area="91" data-id="engel_voelkers:W-02YHBE">
       <a href="https://www.engelvoelkers.com/de/de/exposes/82734ce3-d1a9-5d79-a588-8136af963ea6"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/ef144412-2211-472a-9c74-89921fd29e25/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Kleines Reihenhaus sucht neue Familie"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-02YHBE" title="Add to favourites">★</button>
         <span class="listing-rank">#14</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/82734ce3-d1a9-5d79-a588-8136af963ea6">Kleines Reihenhaus sucht neue Familie</a>
         <span class="listing-score score-mid">64</span>
@@ -399,9 +421,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="449000" data-area="185">
+    <div class="listing" data-price="449000" data-area="185" data-id="immowelt:26LTBF443IMK">
       <a href="https://www.immowelt.de/expose/b6086943-9488-40d5-a801-38c53e931620"><img class="listing-img" src="https://mms.immowelt.de/9/2/9/7/92978244-cba9-46fe-9397-85401ea74a8c.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26LTBF443IMK" title="Add to favourites">★</button>
         <span class="listing-rank">#15</span>
         <a href="https://www.immowelt.de/expose/b6086943-9488-40d5-a801-38c53e931620">Doppelhaushälfte zum Kauf</a>
         <span class="listing-score score-mid">63</span>
@@ -421,9 +444,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="695000" data-area="159">
+    <div class="listing" data-price="695000" data-area="159" data-id="immowelt:24B1296EP57D">
       <a href="https://www.immowelt.de/expose/00083c07-ae77-491d-98d3-ed5614a8effe"><img class="listing-img" src="https://mms.immowelt.de/9/b/b/7/9bb71806-4568-4861-ae7a-2cd0e426546b.jpg?ci_seal=9fb62044ed14c1e4170b3078a53eec15db60020c" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:24B1296EP57D" title="Add to favourites">★</button>
         <span class="listing-rank">#16</span>
         <a href="https://www.immowelt.de/expose/00083c07-ae77-491d-98d3-ed5614a8effe">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">63</span>
@@ -443,9 +467,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="769679" data-area="170">
+    <div class="listing" data-price="769679" data-area="170" data-id="kleinanzeigen:3317377023">
       <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-neubau-in-bestlage/3317377023-208-140"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/8b/8b2ca662-3ca9-43bf-805e-d21c495d5b84?rule=$_59.AUTO" alt="Ihr Neubau in Bestlage"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3317377023" title="Add to favourites">★</button>
         <span class="listing-rank">#17</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/ihr-neubau-in-bestlage/3317377023-208-140">Ihr Neubau in Bestlage</a>
         <span class="listing-score score-mid">63</span>
@@ -466,9 +491,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="696000" data-area="140">
+    <div class="listing" data-price="696000" data-area="140" data-id="ohne_makler:422852">
       <a href="https://www.ohne-makler.net/immobilie/422852/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDIyODUyL2JjYWpoM2p4?sig=7pLCl8bnw2ZBgs2WiIPKWWh1b2gDFbWm_aElRpAdHH8&exp=1772314951" alt="Provisionsfrei in Scharbeutz: Reihenendhaus in ruhiger Sackgasse!"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:422852" title="Add to favourites">★</button>
         <span class="listing-rank">#18</span>
         <a href="https://www.ohne-makler.net/immobilie/422852/">Provisionsfrei in Scharbeutz: Reihenendhaus in ruhiger Sackgasse!</a>
         <span class="listing-score score-mid">63</span>
@@ -488,9 +514,10 @@ Herzlich willkommen in Ihrem technologisch hochwertigen Zuhause, wo Innovation..
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="499000" data-area="125">
+    <div class="listing" data-price="499000" data-area="125" data-id="kleinanzeigen:3314090456">
       <a href="https://www.kleinanzeigen.de/s-anzeige/ostseebad-baabe-moderne-dhh-5-zimmer-125-m-seeblick-kamin-2-baeder-stellplaetze-/3314090456-208-19464"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a9/a9b70ff9-3795-496f-b259-2833a052d301?rule=$_59.AUTO" alt="Ostseebad Baabe: Moderne DHH, 5 Zimmer, 125 m², Seeblick, Kamin, 2 Bäder &amp; Stellplätze!"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3314090456" title="Add to favourites">★</button>
         <span class="listing-rank">#19</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/ostseebad-baabe-moderne-dhh-5-zimmer-125-m-seeblick-kamin-2-baeder-stellplaetze-/3314090456-208-19464">Ostseebad Baabe: Moderne DHH, 5 Zimmer, 125 m², Seeblick, Kamin, 2 Bäder &amp; Stellplätze!</a>
         <span class="listing-score score-mid">61</span>
@@ -511,9 +538,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="330000" data-area="158">
+    <div class="listing" data-price="330000" data-area="158" data-id="immowelt:25XB118P4WNT">
       <a href="https://www.immowelt.de/expose/aca32ffc-5185-4d22-83a8-389c49663c5e"><img class="listing-img" src="https://mms.immowelt.de/6/7/f/5/67f53155-757d-477b-abb5-91b3b21e7fb3.jpg?ci_seal=fb8613330cc00b9dc587dddfd2b00b2956402d73" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25XB118P4WNT" title="Add to favourites">★</button>
         <span class="listing-rank">#20</span>
         <a href="https://www.immowelt.de/expose/aca32ffc-5185-4d22-83a8-389c49663c5e">Haus zum Kauf</a>
         <span class="listing-score score-mid">60</span>
@@ -533,9 +561,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1350000" data-area="161">
+    <div class="listing" data-price="1350000" data-area="161" data-id="immowelt:25C1SXYYM7P4">
       <a href="https://www.immowelt.de/expose/1b51228a-a13d-49a4-8185-371acd45c12a"><img class="listing-img" src="https://mms.immowelt.de/b/a/4/a/ba4a86dc-77cc-48f4-8dec-4e2b8db5bada.jpg?ci_seal=38515044c83df964ecba5678952fc2e5de78e4b1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25C1SXYYM7P4" title="Add to favourites">★</button>
         <span class="listing-rank">#21</span>
         <a href="https://www.immowelt.de/expose/1b51228a-a13d-49a4-8185-371acd45c12a">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">59</span>
@@ -555,9 +584,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="785000" data-area="180">
+    <div class="listing" data-price="785000" data-area="180" data-id="immowelt:25ZMB6GYGKFI">
       <a href="https://www.immowelt.de/expose/3940ab15-9634-4116-b74f-b7bfe916f358"><img class="listing-img" src="https://mms.immowelt.de/2/e/8/2/2e82f73f-c46d-4b36-b5d4-1cdcee0bb2bd.jpg?ci_seal=807ae0a4bf97a2bb327a9b714a7a6a30500f37b8" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25ZMB6GYGKFI" title="Add to favourites">★</button>
         <span class="listing-rank">#22</span>
         <a href="https://www.immowelt.de/expose/3940ab15-9634-4116-b74f-b7bfe916f358">Haus zum Kauf</a>
         <span class="listing-score score-mid">59</span>
@@ -577,9 +607,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="305210" data-area="105">
+    <div class="listing" data-price="305210" data-area="105" data-id="immowelt:26N9W4GY2MU9">
       <a href="https://www.immowelt.de/expose/fd7f85ad-dbc6-489d-9d27-2fb5e0bd6be7"><img class="listing-img" src="https://mms.immowelt.de/c/c/d/b/ccdbf1b9-1179-45c3-b969-6cffc8ddc8b7.jpg" alt="Doppelhaushälfte zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26N9W4GY2MU9" title="Add to favourites">★</button>
         <span class="listing-rank">#23</span>
         <a href="https://www.immowelt.de/expose/fd7f85ad-dbc6-489d-9d27-2fb5e0bd6be7">Doppelhaushälfte zum Kauf</a>
         <span class="listing-score score-mid">58</span>
@@ -599,9 +630,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="698000" data-area="203.5">
+    <div class="listing" data-price="698000" data-area="203.5" data-id="immowelt:26BUEDUQYJ9E">
       <a href="https://www.immowelt.de/expose/852d4718-db4a-4060-b49b-89aebdd3d9d5"><img class="listing-img" src="https://mms.immowelt.de/1/d/a/1/1da1e995-49f8-48ac-b5f3-f21c125fe836.jpg?ci_seal=534e3c86f7d764ed25e9ddf2ac098bc083133be5" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26BUEDUQYJ9E" title="Add to favourites">★</button>
         <span class="listing-rank">#24</span>
         <a href="https://www.immowelt.de/expose/852d4718-db4a-4060-b49b-89aebdd3d9d5">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">58</span>
@@ -621,9 +653,10 @@ Diese Doppelhaushälfte im beliebten Ostseebad Baabe verbindet auf 125,48 m²...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="599000" data-area="135">
+    <div class="listing" data-price="599000" data-area="135" data-id="kleinanzeigen:3115265758">
       <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-offener-architektur/3115265758-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/0a/0a2a8bad-e6f7-4b22-8fe8-3c4a7199ef64?rule=$_59.AUTO" alt="EINFAMILIENHAUS MIT OFFENER ARCHITEKTUR"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3115265758" title="Add to favourites">★</button>
         <span class="listing-rank">#25</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-offener-architektur/3115265758-208-21596">EINFAMILIENHAUS MIT OFFENER ARCHITEKTUR</a>
         <span class="listing-score score-mid">58</span>
@@ -644,9 +677,10 @@ Zeitlose Eleganz außen, Weite und ein besonderes Raumgefühl innen - das ist...
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="549900" data-area="121.47">
+    <div class="listing" data-price="549900" data-area="121.47" data-id="kleinanzeigen:3336337907">
       <a href="https://www.kleinanzeigen.de/s-anzeige/freizeitkapitaene-aufgepasst-ostseetypisches-ferienhaus-am-yachthafen/3336337907-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2a/2a15113a-88dc-4f83-ae5b-2a77c1d9db49?rule=$_59.AUTO" alt="Freizeitkapitäne aufgepasst!  Ostseetypisches Ferienhaus am Yachthafen"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3336337907" title="Add to favourites">★</button>
         <span class="listing-rank">#26</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/freizeitkapitaene-aufgepasst-ostseetypisches-ferienhaus-am-yachthafen/3336337907-208-21596">Freizeitkapitäne aufgepasst!  Ostseetypisches Ferienhaus am Yachthafen</a>
         <span class="listing-score score-mid">58</span>
@@ -667,9 +701,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="496000" data-area="206">
+    <div class="listing" data-price="496000" data-area="206" data-id="engel_voelkers:W-047EDF">
       <a href="https://www.engelvoelkers.com/de/de/exposes/ac569250-c338-58cb-a9c6-1cd9b6f136e2"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/a5391332-737f-4460-9de0-b5c1353a0f0f/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Wohnen in Wassernähe – attraktives Zweifamilienhaus mit großem Baugrundstück"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-047EDF" title="Add to favourites">★</button>
         <span class="listing-rank">#27</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/ac569250-c338-58cb-a9c6-1cd9b6f136e2">Wohnen in Wassernähe – attraktives Zweifamilienhaus mit großem Baugrundstück</a>
         <span class="listing-score score-mid">58</span>
@@ -689,9 +724,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="360000" data-area="123">
+    <div class="listing" data-price="360000" data-area="123" data-id="immowelt:26FDI5BY9U49">
       <a href="https://www.immowelt.de/expose/30209026-019d-4e01-8b0c-9586cf3203aa"><img class="listing-img" src="https://mms.immowelt.de/2/7/3/b/273b43c5-265c-4190-843c-40de892a569b.jpg?ci_seal=98430ffaa644f7aa5cf47716caa2a61bbe28b44e" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26FDI5BY9U49" title="Add to favourites">★</button>
         <span class="listing-rank">#28</span>
         <a href="https://www.immowelt.de/expose/30209026-019d-4e01-8b0c-9586cf3203aa">Bungalow zum Kauf</a>
         <span class="listing-score score-mid">57</span>
@@ -711,9 +747,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="379500" data-area="180">
+    <div class="listing" data-price="379500" data-area="180" data-id="immowelt:25SRJM2B2CYK">
       <a href="https://www.immowelt.de/expose/0f2cb3b5-24c2-4b35-a031-ce130421a768"><img class="listing-img" src="https://mms.immowelt.de/3/a/8/b/3a8be245-c927-4065-b2f7-a80b0f75b7df.jpg?ci_seal=c9b5e7a815c61b2248d7f7df4edabb64c3ffb93d" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25SRJM2B2CYK" title="Add to favourites">★</button>
         <span class="listing-rank">#29</span>
         <a href="https://www.immowelt.de/expose/0f2cb3b5-24c2-4b35-a031-ce130421a768">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">57</span>
@@ -733,9 +770,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="959000" data-area="170">
+    <div class="listing" data-price="959000" data-area="170" data-id="immowelt:25VV94YJC67N">
       <a href="https://www.immowelt.de/expose/f74d0e4b-8b5a-4fe2-a640-bc84a567a616"><img class="listing-img" src="https://mms.immowelt.de/6/3/3/3/633360d7-f6fd-4ada-9e75-df2cff0e325b.jpg?ci_seal=c3544378620b7c24e61c2bedca3e16b50307e77b" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25VV94YJC67N" title="Add to favourites">★</button>
         <span class="listing-rank">#30</span>
         <a href="https://www.immowelt.de/expose/f74d0e4b-8b5a-4fe2-a640-bc84a567a616">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">57</span>
@@ -755,9 +793,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="595000" data-area="106">
+    <div class="listing" data-price="595000" data-area="106" data-id="engel_voelkers:W-047WTW">
       <a href="https://www.engelvoelkers.com/de/de/exposes/63ae59f5-5020-5fd6-8afe-9bbd589fdb3d"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/8fe72d01-dac4-4d39-a38b-c926f53d1f18/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Liebhaberobjekt unter Reet - 200 Schritte von der Ostsee entfernt"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-047WTW" title="Add to favourites">★</button>
         <span class="listing-rank">#31</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/63ae59f5-5020-5fd6-8afe-9bbd589fdb3d">Liebhaberobjekt unter Reet - 200 Schritte von der Ostsee entfernt</a>
         <span class="listing-score score-mid">57</span>
@@ -777,9 +816,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="440000" data-area="184">
+    <div class="listing" data-price="440000" data-area="184" data-id="engel_voelkers:W-047RZB">
       <a href="https://www.engelvoelkers.com/de/de/exposes/dc195e26-62b8-5bde-ad88-612e82d7dfd0"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/cb2b25ca-d2f6-4983-9e5a-e596222f706a/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Historisches Stadthaus im UNESCO-Weltkulturerbe"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-047RZB" title="Add to favourites">★</button>
         <span class="listing-rank">#32</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/dc195e26-62b8-5bde-ad88-612e82d7dfd0">Historisches Stadthaus im UNESCO-Weltkulturerbe</a>
         <span class="listing-score score-mid">57</span>
@@ -799,9 +839,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">141m to coast</p>
     </div>
-    <div class="listing" data-price="1395000" data-area="220">
+    <div class="listing" data-price="1395000" data-area="220" data-id="immowelt:25DZ4UA5K1TU">
       <a href="https://www.immowelt.de/expose/fa729021-6e3d-4032-a0e1-c6f5b8485cf8"><img class="listing-img" src="https://mms.immowelt.de/2/c/8/4/2c84dad8-1663-417d-a5b4-85e92c775d3a.jpg?ci_seal=45322954a9a0159446f840846ddb4123cb2cee25" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25DZ4UA5K1TU" title="Add to favourites">★</button>
         <span class="listing-rank">#33</span>
         <a href="https://www.immowelt.de/expose/fa729021-6e3d-4032-a0e1-c6f5b8485cf8">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">56</span>
@@ -821,9 +862,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="435000" data-area="160">
+    <div class="listing" data-price="435000" data-area="160" data-id="immowelt:26MIILPVCAPY">
       <a href="https://www.immowelt.de/expose/21abb398-fefd-4258-a697-b26b6cf63686"><img class="listing-img" src="https://mms.immowelt.de/4/5/c/1/45c1e51a-a7aa-43e9-9761-a7806f243702.jpg?ci_seal=beb12a9c0a7a2f94a857538dd7f3af4655415b91" alt="Reihenmittelhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26MIILPVCAPY" title="Add to favourites">★</button>
         <span class="listing-rank">#34</span>
         <a href="https://www.immowelt.de/expose/21abb398-fefd-4258-a697-b26b6cf63686">Reihenmittelhaus zum Kauf</a>
         <span class="listing-score score-mid">56</span>
@@ -843,9 +885,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="529000" data-area="200">
+    <div class="listing" data-price="529000" data-area="200" data-id="immowelt:2534PHTQ5X28">
       <a href="https://www.immowelt.de/expose/80544bab-02cf-44af-86ec-55f3d9263222"><img class="listing-img" src="https://mms.immowelt.de/7/1/5/1/7151f159-dd8e-4b17-8934-3ddf9d2ee875.jpg?ci_seal=be5c61ffb00b8da53e569b269ccdbee44063e589" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:2534PHTQ5X28" title="Add to favourites">★</button>
         <span class="listing-rank">#35</span>
         <a href="https://www.immowelt.de/expose/80544bab-02cf-44af-86ec-55f3d9263222">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">56</span>
@@ -865,9 +908,10 @@ Dieses neuwertige Ferienhaus im gehobenen Standard wurde im Jahr 2013 fertig...<
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="880000" data-area="215">
+    <div class="listing" data-price="880000" data-area="215" data-id="kleinanzeigen:3336341113">
       <a href="https://www.kleinanzeigen.de/s-anzeige/kuestenwald-flair-viel-raum-und-freiraum-nur-minuten-zum-meer/3336341113-208-195"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/12/12385b98-a013-4ae3-94fc-8585772144cc?rule=$_59.AUTO" alt="Küstenwald-Flair: viel Raum und Freiraum, nur Minuten zum Meer"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3336341113" title="Add to favourites">★</button>
         <span class="listing-rank">#36</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/kuestenwald-flair-viel-raum-und-freiraum-nur-minuten-zum-meer/3336341113-208-195">Küstenwald-Flair: viel Raum und Freiraum, nur Minuten zum Meer</a>
         <span class="listing-score score-mid">56</span>
@@ -888,9 +932,10 @@ Zum Verkauf steht ein gepflegtes Zweifamilienhaus mit einer Gesamtwohnfläche...
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller · 544m to coast</p>
     </div>
-    <div class="listing" data-price="380000" data-area="182">
+    <div class="listing" data-price="380000" data-area="182" data-id="kleinanzeigen:3311677685">
       <a href="https://www.kleinanzeigen.de/s-anzeige/bauen-sie-fuer-ihrer-familie-ein-energiesparhaus-inkl-grundstueck/3311677685-208-224"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/de/de4dbdd9-8464-4167-b589-2e401c7c70aa?rule=$_59.AUTO" alt="Bauen Sie für Ihrer Familie ein Energiesparhaus inkl. Grundstück"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3311677685" title="Add to favourites">★</button>
         <span class="listing-rank">#37</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/bauen-sie-fuer-ihrer-familie-ein-energiesparhaus-inkl-grundstueck/3311677685-208-224">Bauen Sie für Ihrer Familie ein Energiesparhaus inkl. Grundstück</a>
         <span class="listing-score score-mid">56</span>
@@ -911,9 +956,10 @@ Bei diesem puristisch gestalteten Haus mit rund 182 m² Nettogrundfäche...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="825000" data-area="155">
+    <div class="listing" data-price="825000" data-area="155" data-id="immowelt:25NW9FKIIE3J">
       <a href="https://www.immowelt.de/expose/e245eac0-c1c1-4f67-ad03-4595a8074c7f"><img class="listing-img" src="https://mms.immowelt.de/a/a/9/a/aa9aefad-e556-4221-965d-acbf71555400.jpg?ci_seal=0f683084ea97f898277a5495724f1e74dd272854" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25NW9FKIIE3J" title="Add to favourites">★</button>
         <span class="listing-rank">#38</span>
         <a href="https://www.immowelt.de/expose/e245eac0-c1c1-4f67-ad03-4595a8074c7f">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">55</span>
@@ -933,9 +979,10 @@ Bei diesem puristisch gestalteten Haus mit rund 182 m² Nettogrundfäche...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="738350" data-area="107">
+    <div class="listing" data-price="738350" data-area="107" data-id="immowelt:26DLU7EVT89E">
       <a href="https://www.immowelt.de/expose/cec10dff-b0ad-472e-98db-06ebcf259685"><img class="listing-img" src="https://mms.immowelt.de/0/2/b/2/02b24278-726c-48c3-8a38-6a765151687f.jpg?ci_seal=07cf732b9105c235e3f578d50371768f1bbaf6f6" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26DLU7EVT89E" title="Add to favourites">★</button>
         <span class="listing-rank">#39</span>
         <a href="https://www.immowelt.de/expose/cec10dff-b0ad-472e-98db-06ebcf259685">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">55</span>
@@ -955,9 +1002,10 @@ Bei diesem puristisch gestalteten Haus mit rund 182 m² Nettogrundfäche...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1400000" data-area="176">
+    <div class="listing" data-price="1400000" data-area="176" data-id="immowelt:26VXSRIBXGPL">
       <a href="https://www.immowelt.de/expose/572ba357-ed36-4a7b-8b89-fc637015b6c6"><img class="listing-img" src="https://mms.immowelt.de/9/9/f/a/99fad0ab-d10c-4403-be29-e110e5dca663.png?ci_seal=f76f61d3051669e26712a2319877e01974ee9e34" alt="Einfamilienhaus zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26VXSRIBXGPL" title="Add to favourites">★</button>
         <span class="listing-rank">#40</span>
         <a href="https://www.immowelt.de/expose/572ba357-ed36-4a7b-8b89-fc637015b6c6">Einfamilienhaus zum Kauf - Erstbezug</a>
         <span class="listing-score score-mid">55</span>
@@ -977,9 +1025,10 @@ Bei diesem puristisch gestalteten Haus mit rund 182 m² Nettogrundfäche...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="347000" data-area="112">
+    <div class="listing" data-price="347000" data-area="112" data-id="kleinanzeigen:3041511372">
       <a href="https://www.kleinanzeigen.de/s-anzeige/kein-bock-auf-zinshammer-und-preiswucher-nicht-beim-marktfuehrer-/3041511372-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/79/79947c3e-621b-402b-936f-392ab4e7bbee?rule=$_59.AUTO" alt="Kein Bock auf Zinshammer und Preiswucher? Nicht beim Marktführer!!!"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3041511372" title="Add to favourites">★</button>
         <span class="listing-rank">#41</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/kein-bock-auf-zinshammer-und-preiswucher-nicht-beim-marktfuehrer-/3041511372-208-243">Kein Bock auf Zinshammer und Preiswucher? Nicht beim Marktführer!!!</a>
         <span class="listing-score score-mid">55</span>
@@ -1000,9 +1049,10 @@ Der Markt spielt verrückt? Dann bieten bloß die größten Hausbauer Sicherheit
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="385000" data-area="147">
+    <div class="listing" data-price="385000" data-area="147" data-id="kleinanzeigen:3311677698">
       <a href="https://www.kleinanzeigen.de/s-anzeige/erfuellen-sie-sich-jetzt-ihren-wohntraum-in-idyllischen-lage/3311677698-208-224"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/44/44b7688c-6a6b-40fe-bb54-93813a84c501?rule=$_59.AUTO" alt="Erfüllen Sie sich jetzt Ihren Wohntraum in idyllischen Lage"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3311677698" title="Add to favourites">★</button>
         <span class="listing-rank">#42</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/erfuellen-sie-sich-jetzt-ihren-wohntraum-in-idyllischen-lage/3311677698-208-224">Erfüllen Sie sich jetzt Ihren Wohntraum in idyllischen Lage</a>
         <span class="listing-score score-mid">55</span>
@@ -1024,9 +1074,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="599000" data-area="114">
+    <div class="listing" data-price="599000" data-area="114" data-id="engel_voelkers:W-046M1K">
       <a href="https://www.engelvoelkers.com/de/de/exposes/cc84c772-8c5d-516f-98ed-8e1a2171c2c9"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/2060c908-4217-4820-932b-796e4c91137f/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="5 Sterne - Ferienhaus inkl. Sauna, Kamin und Ostseenähe"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-046M1K" title="Add to favourites">★</button>
         <span class="listing-rank">#43</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/cc84c772-8c5d-516f-98ed-8e1a2171c2c9">5 Sterne - Ferienhaus inkl. Sauna, Kamin und Ostseenähe</a>
         <span class="listing-score score-mid">55</span>
@@ -1046,9 +1097,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="129000" data-area="130">
+    <div class="listing" data-price="129000" data-area="130" data-id="engel_voelkers:W-047I1K">
       <a href="https://www.engelvoelkers.com/de/de/exposes/0445acbf-e447-5720-86fc-25e7d79359bc"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/7d7ef413-3bcc-4ffb-b619-28145f850dc1/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Saniertes Reihenmittelhaus in ruhiger Dorfidylle"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-047I1K" title="Add to favourites">★</button>
         <span class="listing-rank">#44</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/0445acbf-e447-5720-86fc-25e7d79359bc">Saniertes Reihenmittelhaus in ruhiger Dorfidylle</a>
         <span class="listing-score score-mid">55</span>
@@ -1068,9 +1120,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1400000" data-area="112">
+    <div class="listing" data-price="1400000" data-area="112" data-id="ohne_makler:423302">
       <a href="https://www.ohne-makler.net/immobilie/423302/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDIzMzAyL2VsNTVmbDJ2?sig=bqng37szYhc4qZcxqLbITT4X_SljUUyU4Vaw_rCdflQ&exp=1772314937" alt="Zingst – Ferienensemble mit 4 Appartements, Nebengebäude &amp; 5 Stellplätzen"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:423302" title="Add to favourites">★</button>
         <span class="listing-rank">#45</span>
         <a href="https://www.ohne-makler.net/immobilie/423302/">Zingst – Ferienensemble mit 4 Appartements, Nebengebäude &amp; 5 Stellplätzen</a>
         <span class="listing-score score-mid">55</span>
@@ -1090,9 +1143,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="699000" data-area="107.17">
+    <div class="listing" data-price="699000" data-area="107.17" data-id="ohne_makler:412544">
       <a href="https://www.ohne-makler.net/immobilie/412544/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDEyNTQ0LzJzazV0bzlp?sig=RkUBbVFSfxAy85WofbdTO3i-JQHy6qd3TS6lE3172P0&exp=1772314954" alt="Bungalow mit Meerblick, Baujahr 2016"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:412544" title="Add to favourites">★</button>
         <span class="listing-rank">#46</span>
         <a href="https://www.ohne-makler.net/immobilie/412544/">Bungalow mit Meerblick, Baujahr 2016</a>
         <span class="listing-score score-mid">55</span>
@@ -1112,9 +1166,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="998000" data-area="221">
+    <div class="listing" data-price="998000" data-area="221" data-id="immowelt:25HGWZRYG422">
       <a href="https://www.immowelt.de/expose/7034c25d-281a-4024-8e62-e0695f7603e4"><img class="listing-img" src="https://mms.immowelt.de/3/e/5/9/3e59c4c5-aae2-45ab-99ea-075108f2d850.jpg?ci_seal=70d83db3e2b57f84b4e8c8c200f53a5cab2b9ee6" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25HGWZRYG422" title="Add to favourites">★</button>
         <span class="listing-rank">#47</span>
         <a href="https://www.immowelt.de/expose/7034c25d-281a-4024-8e62-e0695f7603e4">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1134,9 +1189,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="399000" data-area="121.43">
+    <div class="listing" data-price="399000" data-area="121.43" data-id="immowelt:26A7FA5DLZYC">
       <a href="https://www.immowelt.de/expose/91b1ec68-1688-4144-8a53-9a80572a303a"><img class="listing-img" src="https://mms.immowelt.de/4/e/8/f/4e8f4029-648e-4de4-b816-632bcea8a84c.jpg?ci_seal=cd9fef4cf55da9631a2e1626f97e6ea56f84a9cc" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26A7FA5DLZYC" title="Add to favourites">★</button>
         <span class="listing-rank">#48</span>
         <a href="https://www.immowelt.de/expose/91b1ec68-1688-4144-8a53-9a80572a303a">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1156,9 +1212,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="499000" data-area="187">
+    <div class="listing" data-price="499000" data-area="187" data-id="immowelt:25ZF7HKTRIVC">
       <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f"><img class="listing-img" src="https://mms.immowelt.de/e/9/7/9/e979f680-6b42-4f9e-ae70-468b2eda86a8.jpg?ci_seal=ca3b289b73153e15a11218406226758b890eaba6" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25ZF7HKTRIVC" title="Add to favourites">★</button>
         <span class="listing-rank">#49</span>
         <a href="https://www.immowelt.de/expose/42232b6c-ad7e-4d96-8c75-5a08779b300f">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1178,9 +1235,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="400000" data-area="134">
+    <div class="listing" data-price="400000" data-area="134" data-id="immowelt:26DQPT3DEPYQ">
       <a href="https://www.immowelt.de/expose/bbc1c398-e2b9-4de4-b71e-62047b291fc4"><img class="listing-img" src="https://mms.immowelt.de/0/c/d/6/0cd61977-a4e9-4bb0-b863-33e7de8e0721.jpg?ci_seal=8450207e9cbad5b3ab9b4cab156c6149e8a31d65" alt="Einfamilienhaus zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26DQPT3DEPYQ" title="Add to favourites">★</button>
         <span class="listing-rank">#50</span>
         <a href="https://www.immowelt.de/expose/bbc1c398-e2b9-4de4-b71e-62047b291fc4">Einfamilienhaus zum Kauf - Erstbezug</a>
         <span class="listing-score score-mid">54</span>
@@ -1200,9 +1258,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="399000" data-area="125">
+    <div class="listing" data-price="399000" data-area="125" data-id="immowelt:25FFH29EPUS6">
       <a href="https://www.immowelt.de/expose/a194a786-baec-4b1e-a51a-171086f3b231"><img class="listing-img" src="https://mms.immowelt.de/8/1/e/6/81e6c0e3-b572-4ce0-9388-b221a20463a5.jpg?ci_seal=de13dd0206f851cdde1c776c1dff154a03e153d1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25FFH29EPUS6" title="Add to favourites">★</button>
         <span class="listing-rank">#51</span>
         <a href="https://www.immowelt.de/expose/a194a786-baec-4b1e-a51a-171086f3b231">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1222,9 +1281,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="355000" data-area="110">
+    <div class="listing" data-price="355000" data-area="110" data-id="immowelt:26WXUMFWECHF">
       <a href="https://www.immowelt.de/expose/51aa66cf-d511-4214-9fc0-90aababd7683"><img class="listing-img" src="https://mms.immowelt.de/f/7/f/b/f7fba20b-7544-46cb-bf1d-3acec7519a2d.jpg?ci_seal=917586c083a9136b17547b117a0a7c9ce9c835b1" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26WXUMFWECHF" title="Add to favourites">★</button>
         <span class="listing-rank">#52</span>
         <a href="https://www.immowelt.de/expose/51aa66cf-d511-4214-9fc0-90aababd7683">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1244,9 +1304,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="499000" data-area="111.15">
+    <div class="listing" data-price="499000" data-area="111.15" data-id="immowelt:25U8NCPDECQ4">
       <a href="https://www.immowelt.de/expose/ce125b55-45f9-486e-9826-1d0787b04225"><img class="listing-img" src="https://mms.immowelt.de/c/b/2/8/cb2878f3-f9ac-40aa-b243-4aaca867b17e.jpg?ci_seal=c51ede8eab04d354f19d0377cd5f096cc993b705" alt="Reihenendhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25U8NCPDECQ4" title="Add to favourites">★</button>
         <span class="listing-rank">#53</span>
         <a href="https://www.immowelt.de/expose/ce125b55-45f9-486e-9826-1d0787b04225">Reihenendhaus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1266,9 +1327,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1150000" data-area="227">
+    <div class="listing" data-price="1150000" data-area="227" data-id="immowelt:25F7T8EFCQ7P">
       <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4"><img class="listing-img" src="https://mms.immowelt.de/a/1/9/4/a1943c44-7a4f-48c4-95a6-35eb4fac3a78.jpg?ci_seal=c0faf0ad3143162ff1ef3cfe8181c9d50dbad646" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25F7T8EFCQ7P" title="Add to favourites">★</button>
         <span class="listing-rank">#54</span>
         <a href="https://www.immowelt.de/expose/3cb1ae1e-e762-4228-abc8-c5bd369400e4">Haus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1288,9 +1350,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1690000" data-area="190">
+    <div class="listing" data-price="1690000" data-area="190" data-id="immowelt:25FURAD1ALBK">
       <a href="https://www.immowelt.de/expose/3ce000b2-276e-4a21-acb2-ca0d4ab116fc"><img class="listing-img" src="https://mms.immowelt.de/a/0/b/4/a0b40f56-9d2e-4226-9d41-a55594dd7207.jpg?ci_seal=2c87c2159afe4c5bd85653c9d2fdaee68b31a432" alt="Haus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25FURAD1ALBK" title="Add to favourites">★</button>
         <span class="listing-rank">#55</span>
         <a href="https://www.immowelt.de/expose/3ce000b2-276e-4a21-acb2-ca0d4ab116fc">Haus zum Kauf</a>
         <span class="listing-score score-mid">54</span>
@@ -1310,9 +1373,10 @@ Besonders spannend zeigt sich die Grundrissform dieses...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="390000" data-area="142">
+    <div class="listing" data-price="390000" data-area="142" data-id="kleinanzeigen:3225892777">
       <a href="https://www.kleinanzeigen.de/s-anzeige/dachterrasse-mit-blick-auf-wald-und-wiese-geraeumiges-wohnen-in-beliebter-lage/3225892777-208-136"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c6bfe502-c45d-4b90-a0b3-ddefff05deef?rule=$_59.AUTO" alt="Dachterrasse mit Blick auf Wald und Wiese - Geräumiges Wohnen in beliebter Lage"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3225892777" title="Add to favourites">★</button>
         <span class="listing-rank">#56</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/dachterrasse-mit-blick-auf-wald-und-wiese-geraeumiges-wohnen-in-beliebter-lage/3225892777-208-136">Dachterrasse mit Blick auf Wald und Wiese - Geräumiges Wohnen in beliebter Lage</a>
         <span class="listing-score score-mid">54</span>
@@ -1333,9 +1397,10 @@ Dieses gepflegte Einfamilienhaus aus dem Baujahr 1980 bietet mit einer...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="1580000" data-area="350">
+    <div class="listing" data-price="1580000" data-area="350" data-id="kleinanzeigen:3336339879">
       <a href="https://www.kleinanzeigen.de/s-anzeige/2-mehrfamilienhaeuser-mit-insgesamt-8-wohneinheiten/3336339879-208-21596"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/15/15478a5a-2b56-47ea-8109-0d852ae6c05e?rule=$_59.AUTO" alt="2 Mehrfamilienhäuser mit insgesamt 8 Wohneinheiten"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3336339879" title="Add to favourites">★</button>
         <span class="listing-rank">#57</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/2-mehrfamilienhaeuser-mit-insgesamt-8-wohneinheiten/3336339879-208-21596">2 Mehrfamilienhäuser mit insgesamt 8 Wohneinheiten</a>
         <span class="listing-score score-mid">54</span>
@@ -1356,9 +1421,10 @@ Diese gepflegten Immobilien, zwei Mehrfamilienhäuser aus dem Baujahr 2010,...</
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="375000" data-area="130">
+    <div class="listing" data-price="375000" data-area="130" data-id="kleinanzeigen:3315967274">
       <a href="https://www.kleinanzeigen.de/s-anzeige/st-gertrud-einfamilienhaus-im-split-level-mit-6-zimmern-keller-und-garage/3315967274-208-421"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/ae/ae6c3dd3-81e0-4f63-a586-d250e5084ae8?rule=$_59.AUTO" alt="St. Gertrud: Einfamilienhaus im Split-Level mit 6 Zimmern, Keller und Garage"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3315967274" title="Add to favourites">★</button>
         <span class="listing-rank">#58</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/st-gertrud-einfamilienhaus-im-split-level-mit-6-zimmern-keller-und-garage/3315967274-208-421">St. Gertrud: Einfamilienhaus im Split-Level mit 6 Zimmern, Keller und Garage</a>
         <span class="listing-score score-mid">54</span>
@@ -1379,9 +1445,10 @@ Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="419900" data-area="123">
+    <div class="listing" data-price="419900" data-area="123" data-id="ohne_makler:431996">
       <a href="https://www.ohne-makler.net/immobilie/431996/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDMxOTk2L29iaDU5ZDZo?sig=O5sSUA9CmqBW_JbJJLSUz58BQGRK4yu-b7DgxvIPTNI&exp=1772314947" alt="Seltenes Familienhaus: 130 m², 5–6 Zimmer, schlüsselfertig mit großem Garten"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:431996" title="Add to favourites">★</button>
         <span class="listing-rank">#59</span>
         <a href="https://www.ohne-makler.net/immobilie/431996/">Seltenes Familienhaus: 130 m², 5–6 Zimmer, schlüsselfertig mit großem Garten</a>
         <span class="listing-score score-mid">54</span>
@@ -1401,9 +1468,10 @@ Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="659000" data-area="220">
+    <div class="listing" data-price="659000" data-area="220" data-id="immowelt:26F67M6Y9G9B">
       <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb"><img class="listing-img" src="https://mms.immowelt.de/e/b/b/4/ebb43aa9-30cb-4ba4-99d1-0bb9c77f685a.jpg?ci_seal=197dea3404f5dafea6efef377611ad3aaab8bd3c" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26F67M6Y9G9B" title="Add to favourites">★</button>
         <span class="listing-rank">#60</span>
         <a href="https://www.immowelt.de/expose/88d55773-013d-45e6-ae2a-2ec56483d5bb">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">53</span>
@@ -1423,9 +1491,10 @@ Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="795000" data-area="168">
+    <div class="listing" data-price="795000" data-area="168" data-id="immowelt:25Q1SV6VXZUL">
       <a href="https://www.immowelt.de/expose/fa27b1ea-ee2c-4132-a5bf-903e11ebbd0f"><img class="listing-img" src="https://mms.immowelt.de/d/6/3/d/d63dd50e-9771-4f18-9932-9f8aafc3ebef.jpg?ci_seal=761007a851d83227014cdaad7a3175a017ae249b" alt="Reihenendhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25Q1SV6VXZUL" title="Add to favourites">★</button>
         <span class="listing-rank">#61</span>
         <a href="https://www.immowelt.de/expose/fa27b1ea-ee2c-4132-a5bf-903e11ebbd0f">Reihenendhaus zum Kauf</a>
         <span class="listing-score score-mid">53</span>
@@ -1445,9 +1514,10 @@ Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="399000" data-area="138.13">
+    <div class="listing" data-price="399000" data-area="138.13" data-id="immowelt:26U15LXHX79E">
       <a href="https://www.immowelt.de/expose/054b5489-b39e-4720-923a-e14ac9c5153e"><img class="listing-img" src="https://mms.immowelt.de/0/2/d/f/02dfadfe-80d1-4238-8de6-0a5fa11f6c0f.jpg?ci_seal=2f232177608b85c3a181166c6b931561fafcd92c" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26U15LXHX79E" title="Add to favourites">★</button>
         <span class="listing-rank">#62</span>
         <a href="https://www.immowelt.de/expose/054b5489-b39e-4720-923a-e14ac9c5153e">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">53</span>
@@ -1467,9 +1537,10 @@ Die Immobilie wurde im Jahre 1967 in massiver Bauweise als Einfamilienhaus im...
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="480000" data-area="163">
+    <div class="listing" data-price="480000" data-area="163" data-id="kleinanzeigen:3199183785">
       <a href="https://www.kleinanzeigen.de/s-anzeige/unser-preisgekroentes-aktionshaus-schluesselfertig-inkl-grundstueck/3199183785-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/63/6313391a-1b64-4649-90f9-d9c3baf0fcd7?rule=$_59.AUTO" alt="Unser preisgekröntes Aktionshaus (schlüsselfertig) inkl. Grundstück"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3199183785" title="Add to favourites">★</button>
         <span class="listing-rank">#63</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/unser-preisgekroentes-aktionshaus-schluesselfertig-inkl-grundstueck/3199183785-208-243">Unser preisgekröntes Aktionshaus (schlüsselfertig) inkl. Grundstück</a>
         <span class="listing-score score-mid">53</span>
@@ -1491,9 +1562,10 @@ Das Modell 16.01.s von massa Haus vereint...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="875000" data-area="123.5">
+    <div class="listing" data-price="875000" data-area="123.5" data-id="kleinanzeigen:3320554836">
       <a href="https://www.kleinanzeigen.de/s-anzeige/kuestennah-effizient-zeitgemaess-wohnen-zwischen-hafenflair-und-stadtleben/3320554836-208-427"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/5e/5e1eb56b-2711-46e4-9f1a-55724c3310fe?rule=$_59.AUTO" alt="Küstennah. Effizient. Zeitgemäß – Wohnen zwischen Hafenflair und Stadtleben"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3320554836" title="Add to favourites">★</button>
         <span class="listing-rank">#64</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/kuestennah-effizient-zeitgemaess-wohnen-zwischen-hafenflair-und-stadtleben/3320554836-208-427">Küstennah. Effizient. Zeitgemäß – Wohnen zwischen Hafenflair und Stadtleben</a>
         <span class="listing-score score-mid">53</span>
@@ -1515,9 +1587,10 @@ Stilvolles Reihenhaus mit Gartenanteil &amp; Terrasse in...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="420000" data-area="135">
+    <div class="listing" data-price="420000" data-area="135" data-id="kleinanzeigen:3297590734">
       <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-980-qm-grundstueck-in-der-altstadt-von-barth/3297590734-208-13562"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/f7/f7c25c13-b152-497d-a6fe-3065b47e51ff?rule=$_59.AUTO" alt="Einfamilienhaus mit 980 qm Grundstück in der Altstadt von Barth"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3297590734" title="Add to favourites">★</button>
         <span class="listing-rank">#65</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/einfamilienhaus-mit-980-qm-grundstueck-in-der-altstadt-von-barth/3297590734-208-13562">Einfamilienhaus mit 980 qm Grundstück in der Altstadt von Barth</a>
         <span class="listing-score score-mid">53</span>
@@ -1537,9 +1610,10 @@ Stilvolles Reihenhaus mit Gartenanteil &amp; Terrasse in...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="369900" data-area="127">
+    <div class="listing" data-price="369900" data-area="127" data-id="ohne_makler:430394">
       <a href="https://www.ohne-makler.net/immobilie/430394/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDMwMzk0L3o4MzB0ODZj?sig=z6QL9M4dPYDnM6ijIdhsFt5rBZImjFCMzgS021PQ2jI&exp=1772314937" alt="Sofort verfügbar: Modernisiertes Doppelhaus mit großer Terrasse und traumhaftem Blick ins Grüne"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:430394" title="Add to favourites">★</button>
         <span class="listing-rank">#66</span>
         <a href="https://www.ohne-makler.net/immobilie/430394/">Sofort verfügbar: Modernisiertes Doppelhaus mit großer Terrasse und traumhaftem Blick ins Grüne</a>
         <span class="listing-score score-mid">53</span>
@@ -1559,9 +1633,10 @@ Stilvolles Reihenhaus mit Gartenanteil &amp; Terrasse in...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="399000" data-area="106">
+    <div class="listing" data-price="399000" data-area="106" data-id="immowelt:26BPW3FRJ37J">
       <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f"><img class="listing-img" src="https://mms.immowelt.de/6/9/a/2/69a25440-6e68-40ba-8995-5277129eaccb.jpg?ci_seal=9647bd47330cd99cf46916a724dab800a15e5215" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26BPW3FRJ37J" title="Add to favourites">★</button>
         <span class="listing-rank">#67</span>
         <a href="https://www.immowelt.de/expose/68b3679a-76c4-4867-b1f1-0d8bde81932f">Bungalow zum Kauf</a>
         <span class="listing-score score-mid">52</span>
@@ -1581,9 +1656,10 @@ Stilvolles Reihenhaus mit Gartenanteil &amp; Terrasse in...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="449000" data-area="129">
+    <div class="listing" data-price="449000" data-area="129" data-id="kleinanzeigen:3198359325">
       <a href="https://www.kleinanzeigen.de/s-anzeige/ein-raumwunder-auf-130m-inkl-grundstueck-schluesselfertig-/3198359325-208-243"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/4b/4b6758fc-ba55-42fc-83cc-bf825ab03d4e?rule=$_59.AUTO" alt="Ein Raumwunder auf 130m² inkl. Grundstück (Schlüsselfertig)"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3198359325" title="Add to favourites">★</button>
         <span class="listing-rank">#68</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/ein-raumwunder-auf-130m-inkl-grundstueck-schluesselfertig-/3198359325-208-243">Ein Raumwunder auf 130m² inkl. Grundstück (Schlüsselfertig)</a>
         <span class="listing-score score-mid">52</span>
@@ -1604,9 +1680,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="595000" data-area="143">
+    <div class="listing" data-price="595000" data-area="143" data-id="immowelt:259QG1AURIUW">
       <a href="https://www.immowelt.de/expose/0a0a72ee-cee9-40a5-8091-ede22cd079e9"><img class="listing-img" src="https://mms.immowelt.de/b/f/7/8/bf78953e-fa20-428c-b58c-c5fb07029722.jpg?ci_seal=7bb5d0845bea2f97d942111fdfd6f263796f6eda" alt="Bungalow zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:259QG1AURIUW" title="Add to favourites">★</button>
         <span class="listing-rank">#69</span>
         <a href="https://www.immowelt.de/expose/0a0a72ee-cee9-40a5-8091-ede22cd079e9">Bungalow zum Kauf</a>
         <span class="listing-score score-mid">51</span>
@@ -1626,9 +1703,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="295000" data-area="115">
+    <div class="listing" data-price="295000" data-area="115" data-id="engel_voelkers:W-047DAB">
       <a href="https://www.engelvoelkers.com/de/de/exposes/664692d6-6db8-5dfb-9818-2c317f7fdfad"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/d78e3441-6b82-41ab-97dc-0fcf11e6f05f/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Charmanter Bungalow in idyllischer Lage"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-047DAB" title="Add to favourites">★</button>
         <span class="listing-rank">#70</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/664692d6-6db8-5dfb-9818-2c317f7fdfad">Charmanter Bungalow in idyllischer Lage</a>
         <span class="listing-score score-mid">51</span>
@@ -1648,9 +1726,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="318200" data-area="129">
+    <div class="listing" data-price="318200" data-area="129" data-id="immowelt:25E18W5EF5I3">
       <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6"><img class="listing-img" src="https://mms.immowelt.de/c/f/4/f/cf4f5ed5-a65b-4bb5-9d81-26789753b2e8.jpg?ci_seal=f67da8d45b7ac29636a211215b707ee670eea70e" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25E18W5EF5I3" title="Add to favourites">★</button>
         <span class="listing-rank">#71</span>
         <a href="https://www.immowelt.de/expose/8f7ee95d-2acf-4c30-8f8d-b2ccb4055ee6">Villa zum Kauf</a>
         <span class="listing-score score-mid">50</span>
@@ -1670,9 +1749,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="435860" data-area="102.29">
+    <div class="listing" data-price="435860" data-area="102.29" data-id="immowelt:257CSJV2TVPL">
       <a href="https://www.immowelt.de/projekte/expose/k2rd532"><img class="listing-img" src="https://mms.immowelt.de/e/4/e/7/e4e7358f-46c2-4a8d-8d84-5e05faececa9.jpg?ci_seal=8f8fe9ce35e2c38535658648c1387ca3715219ed" alt="Reihenmittelhaus zum Kauf - Neubau"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:257CSJV2TVPL" title="Add to favourites">★</button>
         <span class="listing-rank">#72</span>
         <a href="https://www.immowelt.de/projekte/expose/k2rd532">Reihenmittelhaus zum Kauf - Neubau</a>
         <span class="listing-score score-mid">50</span>
@@ -1692,9 +1772,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="380190" data-area="101.74">
+    <div class="listing" data-price="380190" data-area="101.74" data-id="immowelt:25C8NK9N9W6Q">
       <a href="https://www.immowelt.de/projekte/expose/k2rd532"><img class="listing-img" src="https://mms.immowelt.de/e/a/d/f/eadfd3a0-c4db-434d-bb18-981812e040e5.jpg?ci_seal=dfebc7abfe36c7443928f1294d116e43855182e0" alt="Reihenmittelhaus zum Kauf - Neubau"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25C8NK9N9W6Q" title="Add to favourites">★</button>
         <span class="listing-rank">#73</span>
         <a href="https://www.immowelt.de/projekte/expose/k2rd532">Reihenmittelhaus zum Kauf - Neubau</a>
         <span class="listing-score score-mid">50</span>
@@ -1714,9 +1795,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="748000" data-area="168">
+    <div class="listing" data-price="748000" data-area="168" data-id="immowelt:23FQ9C8GED4P">
       <a href="https://www.immowelt.de/expose/23fq9c8ged4p"><img class="listing-img" src="https://mms.immowelt.de/a/5/b/8/a5b81893-1120-4a01-ae66-f5a82f0a9ace.jpg?ci_seal=a3d8e8fc0330c409eca308b5a0ad70ba1f9282e5" alt="Reihenmittelhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:23FQ9C8GED4P" title="Add to favourites">★</button>
         <span class="listing-rank">#74</span>
         <a href="https://www.immowelt.de/expose/23fq9c8ged4p">Reihenmittelhaus zum Kauf</a>
         <span class="listing-score score-mid">50</span>
@@ -1736,9 +1818,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="599000" data-area="188">
+    <div class="listing" data-price="599000" data-area="188" data-id="immowelt:25FNQRVSQDVA">
       <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32"><img class="listing-img" src="https://mms.immowelt.de/6/d/3/1/6d31d059-86c5-470f-b6be-40f5a993a61c.jpg?ci_seal=ad531127d45beff3cb090ab09c5516d6e2abf2a0" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25FNQRVSQDVA" title="Add to favourites">★</button>
         <span class="listing-rank">#75</span>
         <a href="https://www.immowelt.de/expose/39662de6-3b97-4dde-b860-df26f363ab32">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">50</span>
@@ -1758,9 +1841,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="985000" data-area="467">
+    <div class="listing" data-price="985000" data-area="467" data-id="immowelt:26IBL1H2T9ZT">
       <a href="https://www.immowelt.de/expose/e9e6991b-9cf3-45e8-90bd-856059d61428"><img class="listing-img" src="https://mms.immowelt.de/3/e/5/b/3e5bada3-a937-4c95-92da-932d7b18fb53.jpg?ci_seal=61924aefb85a0145fcfd776fcfe6ae33a341af08" alt="Einfamilienhaus zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:26IBL1H2T9ZT" title="Add to favourites">★</button>
         <span class="listing-rank">#76</span>
         <a href="https://www.immowelt.de/expose/e9e6991b-9cf3-45e8-90bd-856059d61428">Einfamilienhaus zum Kauf</a>
         <span class="listing-score score-mid">50</span>
@@ -1780,9 +1864,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="285000" data-area="131">
+    <div class="listing" data-price="285000" data-area="131" data-id="engel_voelkers:W-04862K">
       <a href="https://www.engelvoelkers.com/de/de/exposes/8c616529-8d34-5c78-a0ef-c9cbfc069c43"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/3d5530fa-4b59-460f-b83e-fcea552243ff/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Großzügiger Bungalow mit Vollkeller in ruhiger Lage von Oldenburg"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-04862K" title="Add to favourites">★</button>
         <span class="listing-rank">#77</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/8c616529-8d34-5c78-a0ef-c9cbfc069c43">Großzügiger Bungalow mit Vollkeller in ruhiger Lage von Oldenburg</a>
         <span class="listing-score score-mid">50</span>
@@ -1802,9 +1887,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="250000" data-area="180">
+    <div class="listing" data-price="250000" data-area="180" data-id="engel_voelkers:W-02UC0I">
       <a href="https://www.engelvoelkers.com/de/de/exposes/7403b532-8c24-5baa-8e46-236b0e6a17a2"><img class="listing-img" src="https://uploadcare.engelvoelkers.com/25161399-2e59-4590-a45e-0dc1a4a4d46b/-/format/webp/-/stretch/off/-/progressive/yes/-/resize/800x/-/quality/lighter/" alt="Einfamilienhaus in idyllischer Lage am Glamsee in Warin"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="engel_voelkers:W-02UC0I" title="Add to favourites">★</button>
         <span class="listing-rank">#78</span>
         <a href="https://www.engelvoelkers.com/de/de/exposes/7403b532-8c24-5baa-8e46-236b0e6a17a2">Einfamilienhaus in idyllischer Lage am Glamsee in Warin</a>
         <span class="listing-score score-mid">50</span>
@@ -1824,9 +1910,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">engel_voelkers</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1950000" data-area="546">
+    <div class="listing" data-price="1950000" data-area="546" data-id="immowelt:25Y8LU4AJ1WL">
       <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef"><img class="listing-img" src="https://mms.immowelt.de/7/0/7/4/70741994-6419-4f3d-a309-2c74f9d8e53b.jpg?ci_seal=45165905c695bce0b7a6d4b11764a662b9707c20" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25Y8LU4AJ1WL" title="Add to favourites">★</button>
         <span class="listing-rank">#79</span>
         <a href="https://www.immowelt.de/expose/f905b069-9b39-49ec-a969-632c24e098ef">Villa zum Kauf</a>
         <span class="listing-score score-low">49</span>
@@ -1846,9 +1933,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="599000" data-area="180">
+    <div class="listing" data-price="599000" data-area="180" data-id="ohne_makler:315019">
       <a href="https://www.ohne-makler.net/immobilie/315019/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vMzE1MDE5L2FydXNrdjdp?sig=dDoMIsSPl3J5QlXSucqKRe9xl_FBE2CZsEi696W5Hmg&exp=1772314944" alt="Architektenhaus (KfW 40) mit Schwimmteich + Nebengebäude ( 78 m²)+Solar"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:315019" title="Add to favourites">★</button>
         <span class="listing-rank">#80</span>
         <a href="https://www.ohne-makler.net/immobilie/315019/">Architektenhaus (KfW 40) mit Schwimmteich + Nebengebäude ( 78 m²)+Solar</a>
         <span class="listing-score score-low">49</span>
@@ -1868,9 +1956,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="2190000" data-area="544">
+    <div class="listing" data-price="2190000" data-area="544" data-id="immowelt:25FYL3D9Z1X2">
       <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1"><img class="listing-img" src="https://mms.immowelt.de/e/b/f/f/ebff77c2-268a-434f-882c-4a8107844ee4.jpg?ci_seal=b6c32756a35f8eac922f6a5d0c3489eb8bc513c4" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25FYL3D9Z1X2" title="Add to favourites">★</button>
         <span class="listing-rank">#81</span>
         <a href="https://www.immowelt.de/expose/3425e9e5-d656-43cc-aceb-dfcbc3ca1ff1">Villa zum Kauf</a>
         <span class="listing-score score-low">48</span>
@@ -1890,9 +1979,10 @@ Ein hochmodernes, super gemütliches Einfamilienhaus für die ganze...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="349500" data-area="161">
+    <div class="listing" data-price="349500" data-area="161" data-id="kleinanzeigen:3337751791">
       <a href="https://www.kleinanzeigen.de/s-anzeige/residieren-in-bestlage-ihre-repraesentative-stadtvilla-am-wiesengrund/3337751791-208-16631"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/f7/f7dce29a-c893-4621-8547-8de61e8a69f0?rule=$_59.AUTO" alt="Residieren in Bestlage: Ihre repräsentative Stadtvilla am Wiesengrund"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337751791" title="Add to favourites">★</button>
         <span class="listing-rank">#82</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/residieren-in-bestlage-ihre-repraesentative-stadtvilla-am-wiesengrund/3337751791-208-16631">Residieren in Bestlage: Ihre repräsentative Stadtvilla am Wiesengrund</a>
         <span class="listing-score score-low">48</span>
@@ -1914,9 +2004,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="396800" data-area="185">
+    <div class="listing" data-price="396800" data-area="185" data-id="kleinanzeigen:3337689129">
       <a href="https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-architektenhaus-modern-lichtdurchflutet/3337689129-208-29181"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/68/6821525c-9c5c-4f09-bd3d-b20b22747821?rule=$_59.AUTO" alt="Großzügiges Architektenhaus - Modern &amp; Lichtdurchflutet"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337689129" title="Add to favourites">★</button>
         <span class="listing-rank">#83</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/grosszuegiges-architektenhaus-modern-lichtdurchflutet/3337689129-208-29181">Großzügiges Architektenhaus - Modern &amp; Lichtdurchflutet</a>
         <span class="listing-score score-low">48</span>
@@ -1938,9 +2029,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="349500" data-area="161">
+    <div class="listing" data-price="349500" data-area="161" data-id="kleinanzeigen:3337545363">
       <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-stadtvilla-in-goerries-ruhig-wohnen-schnell-in-der-city/3337545363-208-16520"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/40/40564c13-c7cc-48ce-bf11-7d59a51accfd?rule=$_59.AUTO" alt="NEUBAU | Stadtvilla in Görries - Ruhig wohnen, schnell in der City"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337545363" title="Add to favourites">★</button>
         <span class="listing-rank">#84</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-stadtvilla-in-goerries-ruhig-wohnen-schnell-in-der-city/3337545363-208-16520">NEUBAU | Stadtvilla in Görries - Ruhig wohnen, schnell in der City</a>
         <span class="listing-score score-low">48</span>
@@ -1962,9 +2054,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="349500" data-area="161">
+    <div class="listing" data-price="349500" data-area="161" data-id="kleinanzeigen:3337338631">
       <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-moderne-stadtvilla-in-randlage-der-landeshauptstadt/3337338631-208-284"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/6e/6e209d60-6bf5-40e6-9544-3c2bd9d10f76?rule=$_59.AUTO" alt="NEUBAU | Moderne Stadtvilla in Randlage der Landeshauptstadt"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337338631" title="Add to favourites">★</button>
         <span class="listing-rank">#85</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/neubau-moderne-stadtvilla-in-randlage-der-landeshauptstadt/3337338631-208-284">NEUBAU | Moderne Stadtvilla in Randlage der Landeshauptstadt</a>
         <span class="listing-score score-low">48</span>
@@ -1986,9 +2079,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="830000" data-area="403">
+    <div class="listing" data-price="830000" data-area="403" data-id="kleinanzeigen:3323945176">
       <a href="https://www.kleinanzeigen.de/s-anzeige/denkmalgeschuetzte-stadtvilla-mit-charme-im-herzen-von-schwerin-liebhaberstueck/3323945176-208-284"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2b/2bdfbd74-343f-4cc2-ad7a-29687fc27798?rule=$_59.AUTO" alt="Denkmalgeschützte Stadtvilla mit Charme im Herzen von Schwerin - Liebhaberstück"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3323945176" title="Add to favourites">★</button>
         <span class="listing-rank">#86</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/denkmalgeschuetzte-stadtvilla-mit-charme-im-herzen-von-schwerin-liebhaberstueck/3323945176-208-284">Denkmalgeschützte Stadtvilla mit Charme im Herzen von Schwerin - Liebhaberstück</a>
         <span class="listing-score score-low">48</span>
@@ -2009,9 +2103,10 @@ Das beeindruckende Mehrfamilienhaus aus dem Jahre 1890, das sich seit 135...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="950000" data-area="228">
+    <div class="listing" data-price="950000" data-area="228" data-id="immowelt:256EYEAFNGPM">
       <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df"><img class="listing-img" src="https://mms.immowelt.de/a/a/3/2/aa3263df-3cc1-4191-b580-f89561334825.jpg?ci_seal=08c9d85570e0b7fe15072449381cec27fa91effa" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:256EYEAFNGPM" title="Add to favourites">★</button>
         <span class="listing-rank">#87</span>
         <a href="https://www.immowelt.de/expose/44ac1daa-ca81-4a9f-ba64-108ca621f1df">Villa zum Kauf</a>
         <span class="listing-score score-low">47</span>
@@ -2031,9 +2126,10 @@ Das beeindruckende Mehrfamilienhaus aus dem Jahre 1890, das sich seit 135...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="729000" data-area="180">
+    <div class="listing" data-price="729000" data-area="180" data-id="immowelt:25TSR79J7DQU">
       <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a"><img class="listing-img" src="https://mms.immowelt.de/8/4/1/1/841168fb-4347-4204-9435-986f3d762b8e.jpg?ci_seal=7466d584e50db4be07f73ec403c09923072b0af1" alt="Villa zum Kauf - Erstbezug"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:25TSR79J7DQU" title="Add to favourites">★</button>
         <span class="listing-rank">#88</span>
         <a href="https://www.immowelt.de/expose/214e2904-cf32-453c-a126-9a529b4ea48a">Villa zum Kauf - Erstbezug</a>
         <span class="listing-score score-low">47</span>
@@ -2053,9 +2149,10 @@ Das beeindruckende Mehrfamilienhaus aus dem Jahre 1890, das sich seit 135...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="371000" data-area="134">
+    <div class="listing" data-price="371000" data-area="134" data-id="kleinanzeigen:3337736056">
       <a href="https://www.kleinanzeigen.de/s-anzeige/repraesentative-stadtvilla-nahe-schwerin-lichtdurchflutetes-wohnen-auf-zwei-ebenen/3337736056-208-271"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/dc/dcf8075b-90a9-42a8-91f7-7741333742fc?rule=$_59.AUTO" alt="Repräsentative Stadtvilla nahe Schwerin: Lichtdurchflutetes Wohnen auf zwei Ebenen"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337736056" title="Add to favourites">★</button>
         <span class="listing-rank">#89</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/repraesentative-stadtvilla-nahe-schwerin-lichtdurchflutetes-wohnen-auf-zwei-ebenen/3337736056-208-271">Repräsentative Stadtvilla nahe Schwerin: Lichtdurchflutetes Wohnen auf zwei Ebenen</a>
         <span class="listing-score score-low">47</span>
@@ -2077,9 +2174,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="371000" data-area="134">
+    <div class="listing" data-price="371000" data-area="134" data-id="kleinanzeigen:3337677152">
       <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-luebstorf-stilvoll-wohnen-nahe-schwerin/3337677152-208-29181"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/cd/cde3ade2-07c5-4787-91bd-ae705853a5b4?rule=$_59.AUTO" alt="Moderne Stadtvilla in Lübstorf - Stilvoll wohnen nahe Schwerin"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337677152" title="Add to favourites">★</button>
         <span class="listing-rank">#90</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-luebstorf-stilvoll-wohnen-nahe-schwerin/3337677152-208-29181">Moderne Stadtvilla in Lübstorf - Stilvoll wohnen nahe Schwerin</a>
         <span class="listing-score score-low">47</span>
@@ -2101,9 +2199,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="371000" data-area="134">
+    <div class="listing" data-price="371000" data-area="134" data-id="kleinanzeigen:3337600173">
       <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-pinnow-stilvoll-wohnen-nahe-schwerin/3337600173-208-16618"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/e1/e1142c2f-97e6-43ae-b557-23a47b18cdea?rule=$_59.AUTO" alt="Moderne Stadtvilla in Pinnow - Stilvoll wohnen nahe Schwerin"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3337600173" title="Add to favourites">★</button>
         <span class="listing-rank">#91</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/moderne-stadtvilla-in-pinnow-stilvoll-wohnen-nahe-schwerin/3337600173-208-16618">Moderne Stadtvilla in Pinnow - Stilvoll wohnen nahe Schwerin</a>
         <span class="listing-score score-low">47</span>
@@ -2125,9 +2224,10 @@ Verwirklichen Sie Ihren Wohntraum auf...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="438000" data-area="161">
+    <div class="listing" data-price="438000" data-area="161" data-id="kleinanzeigen:3321524152">
       <a href="https://www.kleinanzeigen.de/s-anzeige/stadtvilla-fuer-die-ganze-familie-grundstueck-vorhanden/3321524152-208-16553"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/dc/dc8e20bb-5cc7-45e7-b0e2-6fbb02edd502?rule=$_59.AUTO" alt="Stadtvilla für die ganze Familie - Grundstück vorhanden"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3321524152" title="Add to favourites">★</button>
         <span class="listing-rank">#92</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/stadtvilla-fuer-die-ganze-familie-grundstueck-vorhanden/3321524152-208-16553">Stadtvilla für die ganze Familie - Grundstück vorhanden</a>
         <span class="listing-score score-low">47</span>
@@ -2149,9 +2249,10 @@ Auf diesem oder einem weiteren Grundstück können Sie Ihr...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="2750000" data-area="544">
+    <div class="listing" data-price="2750000" data-area="544" data-id="immowelt:241N2RRYUWYK">
       <a href="https://www.immowelt.de/expose/7777715b-4d6f-478a-98e8-ed3e981b1e2f"><img class="listing-img" src="https://mms.immowelt.de/0/0/b/6/00b63c28-5e00-44bd-a971-15bd4941f1d1.jpg?ci_seal=d8d336d3ddac189ed2c8aa79488881ce8df8aac2" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:241N2RRYUWYK" title="Add to favourites">★</button>
         <span class="listing-rank">#93</span>
         <a href="https://www.immowelt.de/expose/7777715b-4d6f-478a-98e8-ed3e981b1e2f">Villa zum Kauf</a>
         <span class="listing-score score-low">46</span>
@@ -2171,9 +2272,10 @@ Auf diesem oder einem weiteren Grundstück können Sie Ihr...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="429000" data-area="126">
+    <div class="listing" data-price="429000" data-area="126" data-id="kleinanzeigen:3298600957">
       <a href="https://www.kleinanzeigen.de/s-anzeige/elegantes-reetdachhaus-und-separate-ferien-whg-auf-der-sonneninsel-usedom/3298600957-208-17003"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a1/a174a95e-6b23-4f70-9c45-0ebad6a45540?rule=$_59.AUTO" alt="Elegantes Reetdachhaus und separate Ferien-Whg. auf der Sonneninsel Usedom"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3298600957" title="Add to favourites">★</button>
         <span class="listing-rank">#94</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/elegantes-reetdachhaus-und-separate-ferien-whg-auf-der-sonneninsel-usedom/3298600957-208-17003">Elegantes Reetdachhaus und separate Ferien-Whg. auf der Sonneninsel Usedom</a>
         <span class="listing-score score-low">46</span>
@@ -2194,9 +2296,10 @@ Dieses Verkaufsangebot umfasst ein reetgedecktes Einfamilienhaus, ein...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="579000" data-area="150">
+    <div class="listing" data-price="579000" data-area="150" data-id="kleinanzeigen:3332601605">
       <a href="https://www.kleinanzeigen.de/s-anzeige/letztes-grundstueck-neubau-stadtvilla-provisionsfrei/3332601605-208-454"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/e1/e1084755-d1c4-48ae-9309-b522c8ff6c65?rule=$_59.AUTO" alt="Letztes Grundstück| Neubau Stadtvilla| provisionsfrei"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3332601605" title="Add to favourites">★</button>
         <span class="listing-rank">#95</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/letztes-grundstueck-neubau-stadtvilla-provisionsfrei/3332601605-208-454">Letztes Grundstück| Neubau Stadtvilla| provisionsfrei</a>
         <span class="listing-score score-low">46</span>
@@ -2217,9 +2320,10 @@ Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
       <p style="margin-top: 4px;"><span class="tag source">kleinanzeigen</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="450000" data-area="146">
+    <div class="listing" data-price="450000" data-area="146" data-id="bellevue:30612435">
       <a href="https://www.bellevue.de/expose/30612435.html"><img class="listing-img" src="https://cdn.bellevue.de/media/v6/2025/12/03/20/11/78cb795f848e1b0aabbc353fd1710f0030071b8478cb795f848e1b0aabbc353fd1710f0030071b84.jpg" alt="HORN IMMOBILIEN++ Neubrandenburg, tolles Architektenhaus mit 5 Zimmern, EBK, Keller und Carport"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="bellevue:30612435" title="Add to favourites">★</button>
         <span class="listing-rank">#96</span>
         <a href="https://www.bellevue.de/expose/30612435.html">HORN IMMOBILIEN++ Neubrandenburg, tolles Architektenhaus mit 5 Zimmern, EBK, Keller und Carport</a>
         <span class="listing-score score-low">46</span>
@@ -2239,9 +2343,10 @@ Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
       <p style="margin-top: 4px;"><span class="tag source">bellevue</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="569000" data-area="167">
+    <div class="listing" data-price="569000" data-area="167" data-id="ohne_makler:425720">
       <a href="https://www.ohne-makler.net/immobilie/425720/"><img class="listing-img" src="https://media.ohne-makler.net/rs:fill:488:288/q:90/czM6Ly9vbS1saXN0aW5ncy91cGxvYWQvcGljdHVyZXMvT00vNDI1NzIwL2xlMTJtczV1?sig=jezAgwjqMaARqDgwHeYysziszWWC-ePYDtoMtB0ewBc&exp=1772314950" alt="Einfamilienhaus-Stadtvilla in ruhiger Sackgassenlage in Nortorf mit Blick ins Grüne"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="ohne_makler:425720" title="Add to favourites">★</button>
         <span class="listing-rank">#97</span>
         <a href="https://www.ohne-makler.net/immobilie/425720/">Einfamilienhaus-Stadtvilla in ruhiger Sackgassenlage in Nortorf mit Blick ins Grüne</a>
         <span class="listing-score score-low">46</span>
@@ -2261,9 +2366,10 @@ Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
       <p style="margin-top: 4px;"><span class="tag source">ohne_makler</span> <span class="tag new">NEW</span></p>
       <p class="listing-reason">Private seller</p>
     </div>
-    <div class="listing" data-price="1690000" data-area="333">
+    <div class="listing" data-price="1690000" data-area="333" data-id="immowelt:258KVNRV3RLJ">
       <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c"><img class="listing-img" src="https://mms.immowelt.de/4/5/0/0/45005c70-9007-4cb7-b11f-9669aadc9991.jpg?ci_seal=b32a3c6e95a3cda067f3d10f4dce0cbb622476a9" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:258KVNRV3RLJ" title="Add to favourites">★</button>
         <span class="listing-rank">#98</span>
         <a href="https://www.immowelt.de/expose/770dc282-75c4-4410-ab76-3cbad6bc195c">Villa zum Kauf</a>
         <span class="listing-score score-low">45</span>
@@ -2283,9 +2389,10 @@ Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="1595000" data-area="397">
+    <div class="listing" data-price="1595000" data-area="397" data-id="immowelt:2678MU25E8EY">
       <a href="https://www.immowelt.de/expose/df3cb709-9c50-404a-b67e-a74d0790713a"><img class="listing-img" src="https://mms.immowelt.de/2/1/e/f/21effc9f-9853-4dd3-84f8-eb184c0a2c0c.jpg?ci_seal=0df79ab5217abd4841f2aa8b70e8ff5e942ab546" alt="Villa zum Kauf"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="immowelt:2678MU25E8EY" title="Add to favourites">★</button>
         <span class="listing-rank">#99</span>
         <a href="https://www.immowelt.de/expose/df3cb709-9c50-404a-b67e-a74d0790713a">Villa zum Kauf</a>
         <span class="listing-score score-low">45</span>
@@ -2305,9 +2412,10 @@ Moderne Neubau-Stadtvilla auf dem letzten verfügbaren...</p>
       <p style="margin-top: 4px;"><span class="tag source">immowelt</span> <span class="tag new">NEW</span></p>
       
     </div>
-    <div class="listing" data-price="875000" data-area="160">
+    <div class="listing" data-price="875000" data-area="160" data-id="kleinanzeigen:3238724856">
       <a href="https://www.kleinanzeigen.de/s-anzeige/premium-bauhaus-ferienvilla-160-m-wohnflaeche-auf-950-m-strand-fusslaeufig-mit-sauna-wallbox-/3238724856-208-21546"><img class="listing-img" src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/26/26379b36-40cb-41aa-8ffd-92a084a1e912?rule=$_59.AUTO" alt="Premium Bauhaus Ferienvilla – 160 m² Wohnfläche auf 950 m², Strand fußläufig, mit Sauna &amp; Wallbox!"></a>
       <p class="listing-title">
+        <button class="fav-btn" data-fav="kleinanzeigen:3238724856" title="Add to favourites">★</button>
         <span class="listing-rank">#100</span>
         <a href="https://www.kleinanzeigen.de/s-anzeige/premium-bauhaus-ferienvilla-160-m-wohnflaeche-auf-950-m-strand-fusslaeufig-mit-sauna-wallbox-/3238724856-208-21546">Premium Bauhaus Ferienvilla – 160 m² Wohnfläche auf 950 m², Strand fußläufig, mit Sauna &amp; Wallbox!</a>
         <span class="listing-score score-low">43</span>
@@ -2372,8 +2480,41 @@ Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie.
   var priceFill = document.getElementById('price-fill');
   var areaFill = document.getElementById('area-fill');
   var filterCount = document.getElementById('filter-count');
+  var favToggle = document.getElementById('fav-toggle');
   var listings = document.querySelectorAll('#listings-section .listing');
   var total = listings.length;
+  var showFavsOnly = false;
+
+  // Favourites — persisted in localStorage
+  var STORAGE_KEY = 'ostsee-favs';
+  function loadFavs() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function saveFavs(favs) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
+  }
+  var favs = loadFavs();
+
+  // Initialize star buttons
+  document.querySelectorAll('.fav-btn').forEach(function(btn) {
+    var id = btn.getAttribute('data-fav');
+    if (favs.indexOf(id) !== -1) btn.classList.add('active');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var idx = favs.indexOf(id);
+      if (idx === -1) { favs.push(id); btn.classList.add('active'); }
+      else { favs.splice(idx, 1); btn.classList.remove('active'); }
+      saveFavs(favs);
+      applyFilters();
+    });
+  });
+
+  // Favourites toggle
+  favToggle.addEventListener('click', function() {
+    showFavsOnly = !showFavsOnly;
+    favToggle.classList.toggle('active', showFavsOnly);
+    applyFilters();
+  });
 
   function fmtEur(n) {
     return '\u20AC' + Number(n).toLocaleString('de-DE');
@@ -2411,12 +2552,16 @@ Bitte nehmen Sie sich einen Moment Zeit, lehnen Sie sich zurück und lassen Sie.
     for (var i = 0; i < listings.length; i++) {
       var price = parseInt(listings[i].getAttribute('data-price'));
       var area = parseInt(listings[i].getAttribute('data-area'));
-      var show = price >= minPrice && price <= maxPrice && area >= minArea && area <= maxArea;
+      var id = listings[i].getAttribute('data-id');
+      var matchFilters = price >= minPrice && price <= maxPrice && area >= minArea && area <= maxArea;
+      var matchFav = !showFavsOnly || favs.indexOf(id) !== -1;
+      var show = matchFilters && matchFav;
       listings[i].style.display = show ? '' : 'none';
       if (show) visible++;
     }
 
-    filterCount.textContent = 'Showing ' + visible + ' of ' + total + ' listings';
+    var label = showFavsOnly ? 'Showing ' + visible + ' favourites' : 'Showing ' + visible + ' of ' + total + ' listings';
+    filterCount.textContent = label;
   }
 
   pMin.addEventListener('input', applyFilters);
