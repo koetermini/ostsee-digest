@@ -125,6 +125,7 @@
     </div>
     <div class="filter-count">
       <span id="filter-count">Showing 440 of 440 listings</span>
+      <button class="fav-toggle" id="all-toggle">All</button>
       <button class="fav-toggle" id="fav-toggle">Favourites</button>
       <button class="archive-toggle" id="archive-toggle">Archived</button>
     </div>
@@ -11364,12 +11365,12 @@ Schon von außen beeindruckt die klare Architektur: der spitze Giebel, die hell.
   var areaFill = document.getElementById('area-fill');
   var coastFill = document.getElementById('coast-fill');
   var filterCount = document.getElementById('filter-count');
+  var allToggle = document.getElementById('all-toggle');
   var favToggle = document.getElementById('fav-toggle');
   var archiveToggle = document.getElementById('archive-toggle');
   var listings = document.querySelectorAll('#listings-section .listing');
   var total = listings.length;
-  var showFavsOnly = false;
-  var showArchived = false;
+  var viewMode = 'default'; // 'default' | 'all' | 'favs' | 'archived'
 
   // Favourites — persisted in localStorage
   var FAV_KEY = 'ostsee-favs';
@@ -11417,21 +11418,17 @@ Schon von außen beeindruckt die klare Architektur: der spitze Giebel, die hell.
     });
   });
 
-  // Favourites toggle
-  favToggle.addEventListener('click', function() {
-    showFavsOnly = !showFavsOnly;
-    if (showFavsOnly) { showArchived = false; archiveToggle.classList.remove('active'); }
-    favToggle.classList.toggle('active', showFavsOnly);
+  function setViewMode(mode) {
+    viewMode = (viewMode === mode) ? 'default' : mode;
+    allToggle.classList.toggle('active', viewMode === 'all');
+    favToggle.classList.toggle('active', viewMode === 'favs');
+    archiveToggle.classList.toggle('active', viewMode === 'archived');
     applyFilters();
-  });
+  }
 
-  // Archive toggle
-  archiveToggle.addEventListener('click', function() {
-    showArchived = !showArchived;
-    if (showArchived) { showFavsOnly = false; favToggle.classList.remove('active'); }
-    archiveToggle.classList.toggle('active', showArchived);
-    applyFilters();
-  });
+  allToggle.addEventListener('click', function() { setViewMode('all'); });
+  favToggle.addEventListener('click', function() { setViewMode('favs'); });
+  archiveToggle.addEventListener('click', function() { setViewMode('archived'); });
 
   // --- Swipe gesture handling ---
   var SWIPE_THRESHOLD = 80;
@@ -11585,7 +11582,10 @@ Schon von außen beeindruckt die klare Architektur: der spitze Giebel, die hell.
       btn.classList.toggle('active', favs.indexOf(id) !== -1);
     });
 
-    // Update archive toggle label
+    // Update toggle labels with counts
+    var unsortedCount = total - favs.length - archived.length;
+    allToggle.textContent = 'All (' + unsortedCount + ')';
+    favToggle.textContent = 'Favourites (' + favs.length + ')';
     archiveToggle.textContent = 'Archived (' + archived.length + ')';
 
     var pLo = Math.min(parseInt(pMin.value), parseInt(pMax.value));
@@ -11614,14 +11614,15 @@ Schon von außen beeindruckt die klare Architektur: der spitze Giebel, die hell.
       var matchFilters = price >= minPrice && price <= maxPrice && area >= minArea && area <= maxArea && coast >= minCoast && coast <= maxCoast;
 
       var show = false;
-      if (showArchived) {
-        // Show only archived items (still filter by price/area)
+      if (viewMode === 'archived') {
         show = isArchived && matchFilters;
-      } else if (showFavsOnly) {
-        // Show only favourites (hide archived)
-        show = isFav && !isArchived && matchFilters;
+      } else if (viewMode === 'favs') {
+        show = isFav && matchFilters;
+      } else if (viewMode === 'all') {
+        // All = not favourited and not archived (unsorted)
+        show = !isFav && !isArchived && matchFilters;
       } else {
-        // Default: show non-archived items matching filters
+        // Default: everything except archived
         show = !isArchived && matchFilters;
       }
 
@@ -11629,11 +11630,14 @@ Schon von außen beeindruckt die klare Architektur: der spitze Giebel, die hell.
       if (show) visible++;
     }
 
+    var unsorted = total - favs.length - archived.length;
     var label;
-    if (showArchived) {
-      label = 'Showing ' + visible + ' archived listings';
-    } else if (showFavsOnly) {
+    if (viewMode === 'archived') {
+      label = 'Showing ' + visible + ' archived';
+    } else if (viewMode === 'favs') {
       label = 'Showing ' + visible + ' favourites';
+    } else if (viewMode === 'all') {
+      label = 'Showing ' + visible + ' unsorted';
     } else {
       label = 'Showing ' + visible + ' of ' + (total - archived.length) + ' listings';
     }
