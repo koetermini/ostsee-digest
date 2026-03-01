@@ -135,6 +135,14 @@
   .drop-meta { font-size: 12px; color: var(--grey); margin-top: 2px; }
   .drop-meta .price-drop { color: var(--red); font-weight: 600; }
 
+  /* Criteria */
+  .criteria { padding: 16px 24px; background: var(--grey-bg); border-bottom: 1px solid var(--grey-light); }
+  .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .criteria-col label { display: block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 4px; }
+  .criteria-col p { font-size: 11px; color: var(--black); line-height: 1.5; margin: 0; }
+  .criteria-col .excluded { color: var(--grey); }
+  @media (max-width: 480px) { .criteria-grid { grid-template-columns: 1fr; } }
+
   /* Footer */
   .footer { padding: 20px 24px; border-top: 1px solid var(--grey-light); font-size: 11px; color: var(--grey); letter-spacing: -0.01em; }
 
@@ -152,6 +160,27 @@
     <div class="header-sub">2026-03-01 — 440 listings ranked — 440 active</div>
     <div class="header-sources">
       <span>11 sources</span>   Immowelt · Kleinanzeigen · Engel & Völkers · Bellevue · REALPORTICO · Ohne-Makler · blueHOMES · my-landimmo · alteshaus · ResthofMakler · gutsdorf
+    </div>
+  </div>
+
+  <div class="criteria">
+    <div class="criteria-grid">
+      <div class="criteria-col">
+        <label>Included Types</label>
+        <p>Einfamilienhaus · Ferienhaus · Architektenhaus · Reetdachhaus · Villa · Herrenhaus · Gutshaus</p>
+      </div>
+      <div class="criteria-col">
+        <label>Geography</label>
+        <p>MV + SH · 50–300km from Berlin · >50km from Hamburg</p>
+      </div>
+      <div class="criteria-col">
+        <label>Size &amp; Price</label>
+        <p>100–220m² living area · Min €300k</p>
+      </div>
+      <div class="criteria-col">
+        <label>Excluded</label>
+        <p class="excluded">Mehrfamilienhaus · Wohnanlage · Doppelhaus · Reihenhaus · Bungalow · Stadtvilla · Neubau · Gewerbe · ETW · Penthouse</p>
+      </div>
     </div>
   </div>
 
